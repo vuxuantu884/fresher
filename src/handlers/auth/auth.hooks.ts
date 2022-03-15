@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setUser } from 'store/reducers/user';
+import { setUserAction } from 'store/reducers/user';
 import { LoginInput } from 'types/auth.types';
-import { apiLogin } from './services';
+import { apiLogin } from './auth.services';
 
 export function useLogin() {
   const [phone, setPhone] = useState<string>('');
@@ -23,7 +23,7 @@ export function useLogin() {
     const body: LoginInput = { phone, password }
     const res = await apiLogin(body);
 
-    const action = setUser(res);
+    const action = setUserAction(res);
     dispatch(action);
     router.back();
   }

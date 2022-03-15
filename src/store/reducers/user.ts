@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "store/store";
 import { User } from "types/user.types";
 
 interface UserState {
@@ -12,13 +13,14 @@ export const userSlice = createSlice({
     user: undefined,
   },
   reducers: {
-    setUser: (state: UserState, action: PayloadAction<User>) => {
+    // Cần đặt tên có đuôi Action
+    setUserAction: (state: UserState, action: PayloadAction<User>) => {
       state.user = action.payload;
     },
-    removeUser: (state: UserState) => {
+    removeUserAction: (state: UserState) => {
       state.user = undefined;
     },
-    updateUser: (state: UserState, action: PayloadAction<User>) => {
+    updateUserAction: (state: UserState, action: PayloadAction<User>) => {
       if (action.payload) {
         state.user = state.user ? { ...state.user, ...action.payload  } : action.payload;
       }
@@ -27,6 +29,9 @@ export const userSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setUser, removeUser, updateUser } = userSlice.actions
+export const { setUserAction, removeUserAction, updateUserAction } = userSlice.actions;
+
+// cần đặt tên có đuôi Store
+export const getUserStore = (state: RootState) => state.user.user;
 
 export default userSlice.reducer

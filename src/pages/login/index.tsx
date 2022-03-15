@@ -1,18 +1,19 @@
-import { useLogin } from 'handlers/auth/hooks';
+import { useLogin } from 'handlers/auth/auth.hooks';
+import styles from './styles/login.module.scss';
 
 function LoginPage() {
   const { onChangePhone, onChangePassword, onLogin } = useLogin();
 
   return (
-    <div className='mx-auto mt-4 w-[500px]'>
-      <h1 className='mb-4 text-center'>Login page</h1>
+    <div className={styles.loginContainer}>
+      <h1 className={styles.title}>Login page</h1>
       <div className="mb-4">
-        <input className='w-full border py-3 px-5' type="text" placeholder="phone" onChange={onChangePhone} />
+        <input className={styles.input} type="text" placeholder="phone" onChange={onChangePhone} />
       </div>
       <div className="mb-4">
-        <input className='w-full border  py-3  px-5' type="password" placeholder="password" onChange={onChangePassword} />
+        <input className={styles.input} type="password" placeholder="password" onChange={onChangePassword} />
       </div>
-      <button className='border block mx-auto py-3 px-12' type="button" onClick={onLogin}>Login</button>
+      <button className={styles.button} type="button" onClick={onLogin}>Login</button>
     </div>
   );
 }

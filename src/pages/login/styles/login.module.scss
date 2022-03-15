@@ -1,0 +1,15 @@
+.loginContainer {
+  @apply mx-auto mt-4 w-[500px];
+
+  .title {
+    @apply mb-4 text-center;
+  }
+
+  .input {
+    @apply w-full border py-3 px-5;
+  }
+
+  .button {
+    @apply border block mx-auto py-3 px-12;
+  }
+}
