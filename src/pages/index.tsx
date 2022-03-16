@@ -1,5 +1,5 @@
 import MainLayout from 'layouts/MainLayout';
-import { useSelector } from 'react-redux';
+// import { withTranslations } from 'middleware/withSSTranslations';
 import HomeScreen from './home/HomeScreen';
 
 const HomePage = () => {
@@ -8,5 +8,7 @@ const HomePage = () => {
 };
 
 HomePage.Layout = MainLayout;
+
+// export const getServerSideProps = withTranslations();
 
 export default HomePage;
