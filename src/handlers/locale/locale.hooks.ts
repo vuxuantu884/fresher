@@ -3,7 +3,7 @@ import moment, { locales } from 'moment';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from 'store/store';
+import { RootState } from 'store';
 import { changeLocaleAction, LocaleKey } from 'store/reducers/locale';
 
 const langs: {

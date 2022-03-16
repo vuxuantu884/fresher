@@ -1,6 +1,6 @@
 import { Media } from 'types/common.types';
+import { ResponseBase } from 'utils/api/api.types';
 import ApiUtils from 'utils/api/api.utils';
-import { ResponseBase } from './api/api.types';
 
 export const IMAGE_UPLOAD = '/medias/upload-cloud';
 
