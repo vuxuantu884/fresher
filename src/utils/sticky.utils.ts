@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
 function useSticky(offset: number = 84) {
-    const [isSticky, setSticky] = useState(false)
+  const [isSticky, setSticky] = useState(false);
 
-    const handleScroll = () => {
-        setSticky(window.scrollY >= offset);
-    }
+  const handleScroll = () => {
+    setSticky(window.scrollY >= offset);
+  };
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-        return () => {
-            window.removeEventListener("scroll", () => handleScroll)
-        }
-    }, [handleScroll])
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', () => handleScroll);
+    };
+  }, [handleScroll]);
 
-    return { isSticky }
+  return { isSticky };
 }
 
-export default useSticky
+export default useSticky;

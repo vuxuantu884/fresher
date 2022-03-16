@@ -5,7 +5,7 @@ import { NextPage } from 'next';
 import { Fragment, ReactElement, ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import store from '../store/store';
-import useInitLocale from 'handlers/locale/locale.hooks';
+// import useInitLocale from 'handlers/locale/locale.hooks';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -20,7 +20,7 @@ interface LayoutProps {
 }
 
 function Root(props: any) {
-  useInitLocale();
+  // useInitLocale();
 
   return (
     <Fragment>

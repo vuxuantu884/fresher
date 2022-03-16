@@ -19,7 +19,7 @@ function useLocale() {
   const locale = useSelector((state: RootState) => state.locale);
   const dispatch = useDispatch();
   const setLocale = (localeKey: LocaleKey) => {
-    console.log('locales[localeKey]: ', locales[localeKey]);
+    // @ts-ignore
     const actionChangeLocale = changeLocaleAction(locales[localeKey]);
     dispatch(actionChangeLocale);
   };
