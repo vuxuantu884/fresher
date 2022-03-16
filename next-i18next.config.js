@@ -7,5 +7,4 @@ module.exports = {
         defaultNS: 'common',
         localePath: path.resolve('./src/languages'),
     },
-    react: { useSuspense: false }
 };
