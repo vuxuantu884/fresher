@@ -15,7 +15,7 @@ function ${upper_name}Page() {
   const {} = use${upper_name}();
 
   return (
-    <div className={styles.${name}Container}>
+    <div className={styles.${upper_name}Container}>
       ${upper_name} Page
     </div>
   )
@@ -39,7 +39,7 @@ echo "=============> Created $SOURCEDIR/index.tsx"
 # create css file
 touch "$SOURCEDIR/styles/$name.module.scss"
 echo "
-.${name}Container {
+.${upper_name}Container {
   @apply container mx-auto;
 }
 " >> "$SOURCEDIR/styles/$name.module.scss"

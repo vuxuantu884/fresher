@@ -20,11 +20,11 @@ import ApiUtils from 'utils/api/api.utils';
 import { ${upper_name} } from './$name.types'
 
 const apiName = {
-  ${name}: '${name}'
+  '${name}': '${name}'
 };
 
 export const apiFetch${upper_name} = async (): Promise<${upper_name}[]> => {
-  const res = await ApiUtils.fetch<undefined, ResponseBase<${upper_name}[]>>(apiName.${name});
+  const res = await ApiUtils.fetch<undefined, ResponseBase<${upper_name}[]>>(apiName['${name}']);
 
   return res?.data || [];
 };
