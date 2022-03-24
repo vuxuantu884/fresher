@@ -8,7 +8,6 @@ import { Provider } from "react-redux";
 import store from "../store";
 import "../styles/globals.css";
 import { GlobalStyles, theme } from "types";
-// import useInitLocale from 'handlers/locale/locale.hooks';
 import nextI18NextConfig from "../../next-i18next.config.js";
 
 console.log(nextI18NextConfig);
