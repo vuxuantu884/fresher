@@ -1,34 +1,34 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import localStorageHelper, { KeyStorage } from 'utils/localStorage';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import localStorageHelper, { KeyStorage } from "utils/localStorage";
 
 export type Locale = {
-    key: string;
-    name: string;
+  key: string;
+  name: string;
 };
 
 export const locales = {
-    en: { key: 'en', name: 'EN' },
-    vi: { key: 'vi', name: 'VN' }
+  vi: { key: "vi", name: "VN" },
+  en: { key: "en", name: "EN" },
 };
 
 export type LocaleKey = keyof typeof locales;
 
-const defaultLocaleKey = process.env.NEXT_PUBLIC_LOCALE_DEFAULT || 'vi';
+const defaultLocaleKey = process.env.NEXT_PUBLIC_LOCALE_DEFAULT || "vi";
 
 const initialState: Locale = localStorageHelper.getObject(
-    KeyStorage.LOCALE,
-    // @ts-ignore
-    locales[defaultLocaleKey]
+  KeyStorage.LOCALE,
+  // @ts-ignore
+  locales[defaultLocaleKey]
 ) as Locale;
 
 const localeSlice = createSlice({
-    name: 'locale',
-    initialState: initialState,
-    reducers: {
-        changeLocaleAction: (state: Locale, action: PayloadAction<Locale>) => {
-            Object.assign(state, action.payload);
-        }
-    }
+  name: "locale",
+  initialState: initialState,
+  reducers: {
+    changeLocaleAction: (state: Locale, action: PayloadAction<Locale>) => {
+      Object.assign(state, action.payload);
+    },
+  },
 });
 
 const { reducer, actions } = localeSlice;
