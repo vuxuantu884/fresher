@@ -7,10 +7,9 @@ import { Provider } from "react-redux";
 
 import store from "../store";
 import "../styles/globals.css";
-import { GlobalStyles, theme } from "types";
+import { GlobalStyles, theme } from "styles";
 import nextI18NextConfig from "../../next-i18next.config.js";
-
-console.log(nextI18NextConfig);
+import "antd/dist/antd.css"; //andt css
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;

@@ -1,19 +1,17 @@
-import FooterLayout from './FooterLayout';
-import HeaderLayout from './HeaderLayout';
-import styles from './styles/main.module.scss';
+import { FooterLayout, HeaderLayout } from ".";
+import { StyledLayout } from "styles";
+import styles from "./styles/main.module.scss";
 
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-function MainLayout({ children }: Props) {
+export const MainLayout = ({ children }: Props) => {
   return (
-    <div>
+    <StyledLayout>
       <HeaderLayout />
       <main className={styles.main}>{children}</main>
       <FooterLayout />
-    </div>
+    </StyledLayout>
   );
-}
-
-export default MainLayout;
+};

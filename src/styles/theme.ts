@@ -1,10 +1,15 @@
+import { enumBreakPoint } from "constant/enum";
+
 export const theme = {
   colors: {
-    main: "#f4394f",
-    primary: "#007bff",
-    info: "#1890ff",
-    success: "#52c41a",
-    green: "#05C755",
+    primary: "#B61E42",
+    second: "#47817E",
+    black: "#000000",
+    bodyText: "#333333",
+    gray_1: "#828282",
+    gray_2: "#BDBDBD",
+    gray_3: "#E0E0E0",
+    gray_4: "#F2F2F2",
     processing: "#1890ff",
     error: "#f5222d",
     highlight: "#f5222d",
@@ -27,12 +32,11 @@ export const theme = {
     sm: "4px",
   },
   breakPoints: {
-    breakSmall: "320px",
-    breakMobile: "375px",
-    breakMobileLarge: "414px",
-    breakMobileMax: "480px",
-    breakMobileMedium: "575px",
-    breakTablet: "768px",
+    breakSmall: enumBreakPoint.sm + "px",
+    breakMedium: enumBreakPoint.md + "px",
+    breakLarge: enumBreakPoint.lg + "px",
+    breakExtraLarge: enumBreakPoint.xl + "px",
+    breakExtraExtraLarge: enumBreakPoint.xxl + "px",
   },
   widths: {
     wide_650: "650px",
