@@ -1,5 +1,26 @@
 {
-    "home": "Trang chủ",
-    "login": "Đăng nhập",
-    "logout": "Đăng xuất"
+  "home": {
+    "weeklySale": "Sale hàng tuần",
+    "campaign": "Chiến dịch",
+    "reikaFashion": " REIKA FASHION",
+    "women": "WOMEN",
+    "man": "MAN",
+    "kids": "KIDS",
+    "sport": "SPORT",
+    "outline": "OUTLET",
+    "brandlist": "BRANDLIST",
+    "signUp": "Đăng ký thành viên"
+  },
+  "footer": {
+    "type": "Thẻ loại",
+    "userManual": "Hướng dẫn sử dụng",
+    "frequentlyAskedQuestions": "Câu hỏi thường gặp",
+    "socialNetwork": "Mạng xã hội",
+    "companyProfileConditions": "Hồ sơ công ty - Điều kiện",
+    "reikaiPC": "REIKAI PC",
+    "footerDesc": "Trang web mua sắm trực tuyến về giày và thời trang",
+    "copyRight": "Copyright @ REIKAFASHION.Inc. All Rights Reserved"
+  },
+  "login": "Đăng nhập",
+  "logout": "Đăng xuất"
 }

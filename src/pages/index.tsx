@@ -1,4 +1,4 @@
-import MainLayout from "layouts/MainLayout";
+import { MainLayout } from "layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import HomeScreen from "./home/HomeScreen";
 

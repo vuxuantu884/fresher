@@ -1,10 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-import { theme } from ".";
+import { theme } from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('/static/app.css');
-  @import url('/static/nprogress.css');
+  @import url('./globals.css');
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -126,12 +125,7 @@ export const GlobalStyles = createGlobalStyle`
   .bg-normal {
     background-color: ${theme.colors.normal} !important;
   }
-  .bg-success {
-    background-color: ${theme.colors.success} !important;
-  }
-  .bg-info {
-    background-color: ${theme.colors.info} !important;
-  }
+  
   .bg-warning {
     background-color: ${theme.colors.warning} !important;
   }
@@ -183,12 +177,7 @@ export const GlobalStyles = createGlobalStyle`
   .border-normal {
     border-color: ${theme.colors.normal} !important;
   }
-  .border-success {
-    border-color: ${theme.colors.success} !important;
-  }
-  .border-info {
-    border-color: ${theme.colors.info} !important;
-  }
+
   .border-warning {
     border-color: ${theme.colors.warning} !important;
   }
@@ -482,7 +471,7 @@ export const GlobalStyles = createGlobalStyle`
   .mx-auto {
     margin-left: auto !important;
   }
-  @media (min-width: ${theme.breakPoints.breakMobileMedium}) {
+  @media (min-width: ${theme.breakPoints.breakSmall}) {
     .m-sm-0 {
       margin: 0 !important;
     }
@@ -1531,12 +1520,7 @@ export const GlobalStyles = createGlobalStyle`
   .text-normal {
     color: ${theme.colors.normal} !important;
   }
-  .text-success {
-    color: ${theme.colors.success} !important;
-  }
-  .text-info {
-    color: ${theme.colors.info} !important;
-  }
+
   .text-warning {
     color: ${theme.colors.warning} !important;
   }
