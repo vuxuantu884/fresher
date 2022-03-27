@@ -1,4 +1,3 @@
-import { Row, Col } from "antd";
 import {
   IConArrowDow,
   IConBook,
@@ -8,91 +7,61 @@ import {
 import { useTranslation } from "next-i18next";
 import styled from "styled-components";
 
-import { StyledFooter } from "styles";
-
 export const FooterLayout = () => {
   //page hooks
   const { t } = useTranslation();
 
   return (
-    <StyledFooter>
-      <StyledRowFooter justify="space-between">
-        <Col>{t("footer.type")}</Col>
-        <Col>
+    <div className="bg-white text-bodyText font-sans not-italic font-normal text-sm">
+      <div className="footer-item" >
+        <span>{t("footer.type")}</span>
           <IConArrowDow />
-        </Col>
-      </StyledRowFooter>
-      <StyledRowFooter justify="space-between">
-        <Col>
-          <Row align="middle">
-            <StyledICon>
-              <IConBook />
-            </StyledICon>
-            <Col>{t("footer.userManual")}</Col>
-          </Row>
-        </Col>
-        <Col>
-          <IConArrowDow />
-        </Col>
-      </StyledRowFooter>
-      <StyledRowFooter justify="space-between">
-        <Col>
-          <Row align="middle">
-            <StyledICon>
-              <IConQuestionCircle />
-            </StyledICon>
-            <Col> {t("footer.frequentlyAskedQuestions")}</Col>
-          </Row>
-        </Col>
-        <Col>
-          <IConArrowDow />
-        </Col>
-      </StyledRowFooter>
-      <StyledRowFooter justify="space-between">
-        <Col>{t("footer.socialNetwork")}</Col>
-        <Col>
-          <IConArrowDow />
-        </Col>
-      </StyledRowFooter>
-      <StyledRowFooter justify="space-between">
-        <Col>{t("footer.companyProfileConditions")}</Col>
-        <Col>
-          <IConArrowDow />
-        </Col>
-      </StyledRowFooter>
-      <StyledRowFooter justify="space-between">
-        <Col>
-          <Row align="middle">
-            <StyledICon>
-              <IConDeskTop />
-            </StyledICon>
-            <Col> {t("footer.reikaiPC")}</Col>
-          </Row>
-        </Col>
-        <Col>
-          <IConArrowDow />
-        </Col>
-      </StyledRowFooter>
-      <div className="copyRight">
-        <div className="copyRight--desc">{t("footer.footerDesc")}</div>
-        <div className="copyRight--title">{t("footer.copyRight")}</div>
       </div>
-    </StyledFooter>
+      <div className="footer-item">
+        <span>
+          <div className="flex align-middle">
+            <div className="mr-4">
+              <IConBook />
+            </div>
+            <span>{t("footer.userManual")}</span>
+          </div>
+        </span>
+          <IConArrowDow />
+      </div>
+      <div className="footer-item">
+        <span>
+          <div className="flex align-middle">
+            <div className="mr-4">
+              <IConQuestionCircle />
+            </div>
+            <span> {t("footer.frequentlyAskedQuestions")}</span>
+          </div>
+        </span>
+          <IConArrowDow />
+      </div>
+      <div className="footer-item">
+        <span>{t("footer.socialNetwork")}</span>
+          <IConArrowDow />
+      </div>
+      <div className="footer-item">
+        <span>{t("footer.companyProfileConditions")}</span>
+          <IConArrowDow />
+      </div>
+      <div className="footer-item">
+        <span>
+          <div className="flex align-middle">
+            <div className="mr-4">
+              <IConDeskTop />
+            </div>
+            <span> {t("footer.reikaiPC")}</span>
+          </div>
+        </span>
+          <IConArrowDow />
+      </div>
+      <div className="py-4 text-center">
+        <div className="mb-2">{t("footer.footerDesc")}</div>
+        <div className="text-xs">{t("footer.copyRight")}</div>
+      </div>
+    </div>
   );
 };
-
-const StyledRowFooter = styled(Row)`
-  padding: 1.3rem 1.6rem;
-  color: ${(p) => p.theme.colors.bodyText};
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  border-bottom: 1px solid #f2f2f2;
-  cursor: pointer;
-`;
-
-const StyledICon = styled(Col)`
-  margin-right: 1.2rem;
-`;

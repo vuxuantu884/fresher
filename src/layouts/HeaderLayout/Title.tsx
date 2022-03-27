@@ -1,5 +1,3 @@
-import { Row } from "antd";
-
 import {
   IConHamburger,
   IConSearch,
@@ -13,20 +11,20 @@ export const HeaderTitle = () => {
   const { t } = useTranslation();
 
   return (
-    <Row gutter={24} className="header-title">
+    <div className="flex bg-white p-4">
       <div className="mr-4">
         <IConHamburger />
       </div>
       <div className="">
         <IConSearch />
       </div>
-      <div className="reikaFashion">{t("home.reikaFashion")}</div>
+      <div className="flex-1 text-center text-black font-sans not-italic font-bold text-base leading-[19px]">{t("home.reikaFashion")}</div>
       <div className="mr-4">
         <IConHeart />
       </div>{" "}
       <div className="">
         <IConShoppingCart />
       </div>
-    </Row>
+    </div>
   );
 };

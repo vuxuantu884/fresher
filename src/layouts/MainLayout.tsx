@@ -1,5 +1,4 @@
 import { FooterLayout, HeaderLayout } from ".";
-import { StyledLayout } from "styles";
 import styles from "./styles/main.module.scss";
 
 interface Props {
@@ -8,10 +7,10 @@ interface Props {
 
 export const MainLayout = ({ children }: Props) => {
   return (
-    <StyledLayout>
+    <div className="max-w-sm my-0 mx-auto">
       <HeaderLayout />
       <main className={styles.main}>{children}</main>
       <FooterLayout />
-    </StyledLayout>
+    </div>
   );
 };

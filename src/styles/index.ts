@@ -1,3 +1,1 @@
-export * from "./Layout";
-export * from "./globalStyles";
-export * from "./theme";
+export const x = 1;

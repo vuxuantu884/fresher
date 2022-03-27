@@ -1,8 +1,5 @@
-import { Row, Col } from "antd";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
-import styled from "styled-components";
-import { theme } from "styles";
 
 import { useHomeMenu } from "handlers";
 
@@ -21,39 +18,21 @@ export const HeaderMenu = () => {
   ];
 
   return (
-    <StyledMenuRow gutter={24}>
+    <div className="bg-white px-2 py-4 flex">
       {dataMenu.map((item, index) => {
         return (
-          <StyledMenuCol
-            span={6}
+          <div
             key={index}
-            color={currentMenu === item ? theme.colors.primary : "#000"}
+            className={`${currentMenu === item ? "text-primary" : "text-black"} w-[25%] text-center`}
             onClick={() => {
               handleToggleMenu(item);
             }}
           >
-            <span>{item}</span>
-          </StyledMenuCol>
+            <span className="cursor-pointer font-sans font-medium text-sm leading-5">{item}</span>
+          </div>
         );
       })}
-    </StyledMenuRow>
+    </div>
   );
 };
 
-const StyledMenuRow = styled(Row)`
-  background-color: #fff;
-  padding: 0.8rem 1.6rem;
-  text-align: center;
-`;
-
-const StyledMenuCol = styled(Col)`
-  color: ${(p) => p.color};
-  span {
-    cursor: pointer;
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 2rem;
-  }
-`;

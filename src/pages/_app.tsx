@@ -1,13 +1,11 @@
 import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
 import { NextPage } from "next";
-import { ThemeProvider } from "styled-components";
 import { Fragment, ReactElement, ReactNode } from "react";
 import { Provider } from "react-redux";
 
 import store from "../store";
 import "../styles/globals.css";
-import { GlobalStyles, theme } from "styles";
 import nextI18NextConfig from "../../next-i18next.config.js";
 import "antd/dist/antd.css"; //andt css
 
@@ -40,14 +38,11 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     (({ children }: LayoutProps) => <>{children}</>);
   return (
     <Provider store={store}>
-      <GlobalStyles />
-      <ThemeProvider theme={theme}>
         <Root>
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </Root>
-      </ThemeProvider>
     </Provider>
   );
 }

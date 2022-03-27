@@ -9,7 +9,12 @@
     "sport": "SPORT",
     "outline": "OUTLET",
     "brandlist": "BRANDLIST",
-    "signUp": "Đăng ký thành viên"
+    "signUp": "Đăng ký thành viên để được nhận ưu đãi hàng ngày",
+    "signMember":"Đăng ký thành viên",
+    "productCurent": "Số sản phẩm hiện tại",
+    "viewedProduct":"Sản phẩm đã xem",
+    "productDesc":"Vì không có lịch sử xem, hiển thị sản phẩm đề xuất"
+
   },
   "footer": {
     "type": "Thẻ loại",

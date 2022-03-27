@@ -1,5 +1,6 @@
-import { MainLayout } from "layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+import { MainLayout } from "layouts";
 import HomeScreen from "./home/HomeScreen";
 
 const HomePage = () => {
