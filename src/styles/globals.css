@@ -1,13 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import "./input.css";
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
 }
 
 a {
@@ -17,4 +18,31 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@layer components {
+  .btn {
+    @apply flex items-center justify-center not-italic;
+  }
+  .btn-nolmal {
+    @apply text-white font-sans text-sm font-normal  py-0.5 px-2 rounded-[35px] border-[1px] border-solid border-white;
+  }
+  .btn-primary {
+    @apply text-bodyText rounded-[32px] text-base border-none font-bold w-[120px] h-[25px] bg-white;
+  }
+  .btn-primary-full {
+    @apply bg-primary py-[17px] rounded not-italic text-sm font-normal text-white w-full;
+  }
+  .btn-second {
+    @apply px-[45px] py-[7px] rounded not-italic text-sm font-normal text-second border-second border-solid border-[1px];
+  }
+  .footer-item {
+    @apply px-4 py-3.5 text-bodyText font-sans not-italic font-normal text-sm border-b-[1px]  border-solid border-gray_4 flex justify-between;
+  }
+  .title {
+    @apply text-base font-bold font-sans not-italic text-bodyText;
+  }
+  .title-desc {
+    @apply text-gray_1 text-sm font-normal font-sans;
+  }
 }

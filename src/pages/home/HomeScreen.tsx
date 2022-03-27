@@ -1,14 +1,19 @@
 import useHome from "handlers/home/home.hooks";
-import HomeBanner from "./components/HomeBanner";
-import styles from './styles/home.module.scss';
+import HomeBrand from "./components/Brand";
+import HomeSearch from "./components/Search";
+import HomeSignUp from "./components/SignUp";
+import HomeViewedProduct from "./components/ViewedProducts";
 
 function HomeScreen() {
-  const {} = useHome();
+  const { } = useHome();
 
   return (
-    <div className={styles.homeContainer}>
-      <HomeBanner />
-    </div>
+    <>
+      <HomeSearch />
+      <HomeBrand/>
+      <HomeSignUp/>
+      <HomeViewedProduct/>
+    </>
   )
 }
 
