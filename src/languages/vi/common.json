@@ -13,7 +13,11 @@
     "signMember": "Đăng ký thành viên",
     "productCurent": "Số sản phẩm hiện tại",
     "viewedProduct": "Sản phẩm đã xem",
-    "productDesc": "Vì không có lịch sử xem, hiển thị sản phẩm đề xuất"
+    "favoriteProduct": "Sản phẩm yêu thích",
+    "productDesc": "Vì không có lịch sử xem, hiển thị sản phẩm đề xuất",
+    "seeMore": "Xem thêm",
+    "searchRanking": "Xếp hạng tim kiếm",
+    "searchByCategory": "Tìm kiếm theo danh mục"
   },
   "footer": {
     "type": "Thẻ loại",
@@ -26,5 +30,19 @@
     "copyRight": "Copyright @ REIKAFASHION.Inc. All Rights Reserved"
   },
   "login": "Đăng nhập",
-  "logout": "Đăng xuất"
+  "logout": "Đăng xuất",
+  "day": "Ngày",
+  "month": "Tháng",
+  "week": "Tuần",
+  "shoes": "Giầy",
+  "garment": "May mặc",
+  "bags": "Túi sách",
+  "accessory": "Phụ kiện",
+  "jewels": "Trang sức",
+  "cosmetic": "Mỹ phẩm",
+  "leather": "Đồ da",
+  "free": "Miễn phí",
+  "usagePolicy": "Chính sách sử dụng",
+  "help": "Trợ giúp",
+  "viewHistory": "Lịch sử xem"
 }

@@ -9,8 +9,7 @@
   @apply !border-transparent;
 }
 .ant-input-group-wrapper.ant-input-search {
-    @apply rounded overflow-hidden;
-  background-color: theme('colors.gray_4');
+  @apply rounded overflow-hidden bg-gray_4;
 }
 .ant-input-search
   > .ant-input-group
@@ -19,22 +18,19 @@
   @apply !border-none !bg-transparent;
 }
 .ant-input-suffix {
-    @apply hidden;
+  @apply hidden !important;
 }
 .ant-input,
 .ant-input::placeholder {
-    @apply  bg-transparent font-sans not-italic font-normal text-sm;
-  color:  theme('colors.gray_1');
+  @apply bg-transparent font-sans not-italic font-normal text-sm text-gray_1 !important;
 }
 .ant-input-group-addon:last-child {
-  background-color: theme('colors.primary') !important;
+  @apply bg-primary !important;
 }
 .ant-btn-primary {
   @apply !border-none !bg-transparent !shadow-none;
   border-color: initial !important;
-  
 }
 .ant-btn-primary svg {
-    width: 24px;
-    height: 24px;
+  @apply w-6 h-6;
 }

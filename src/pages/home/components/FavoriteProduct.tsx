@@ -54,14 +54,13 @@ const products: IProduct[] = [
   },
 ];
 
-export default function HomeViewedProduct() {
+export default function HomeFavoriteProduct() {
   //page hooks
   const { t } = useTranslation();
-  //page variable
 
   return (
     <div className="mt-4 bg-white py-4">
-      <div className="title ml-4 mb-3">{t("home.viewedProduct")} </div>
+      <div className="title ml-4 mb-3">{t("home.favoriteProduct")} </div>
       <div className="title-desc mb-4 text-center">{t("home.productDesc")}</div>
       <div className="flex gap-y-4 flex-wrap px-4">
         {products.map((data, index) => {
@@ -71,6 +70,9 @@ export default function HomeViewedProduct() {
             </div>
           );
         })}
+      </div>
+      <div className="px-4 mt-5">
+        <button className="btn-add px-4"> {t("home.seeMore")} 10~99</button>
       </div>
     </div>
   );

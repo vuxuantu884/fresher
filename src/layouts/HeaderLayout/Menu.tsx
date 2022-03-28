@@ -23,16 +23,19 @@ export const HeaderMenu = () => {
         return (
           <div
             key={index}
-            className={`${currentMenu === item ? "text-primary" : "text-black"} w-[25%] text-center`}
+            className={`${
+              currentMenu === item ? "text-primary" : "text-black"
+            } w-[25%] text-center`}
             onClick={() => {
               handleToggleMenu(item);
             }}
           >
-            <span className="cursor-pointer font-sans font-medium text-sm leading-5">{item}</span>
+            <span className="cursor-pointer font-sans font-medium text-sm leading-5">
+              {item}
+            </span>
           </div>
         );
       })}
     </div>
   );
 };
-

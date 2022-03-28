@@ -6,3 +6,8 @@ export * from "./Arrow";
 export * from "./Book";
 export * from "./QuestionCircle";
 export * from "./Desktop";
+export * from "./Media";
+export * from "./Login";
+export * from "./Pencil";
+export * from "./TimeLine";
+export * from "./Close";

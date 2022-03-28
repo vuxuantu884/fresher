@@ -7,7 +7,7 @@ interface Props {
 
 export const MainLayout = ({ children }: Props) => {
   return (
-    <div className="max-w-sm my-0 mx-auto">
+    <div className="max-w-sm my-0 mx-auto bg-gray_4 relative">
       <HeaderLayout />
       <main className={styles.main}>{children}</main>
       <FooterLayout />
