@@ -13,3 +13,27 @@
     @apply border block mx-auto py-3 px-12;
   }
 }
+
+.login {
+  border-radius: 4px;
+  overflow: hidden;
+
+  input[class*="ant-input"]:hover {
+    border-color: initial !important;
+    box-shadow: initial !important;
+    border-radius: 4px;
+  }
+  span[class*="ant-input-affix-wrapper"],
+  span[class*="ant-input-affix-wrapper"]:hover {
+    border: 1px solid #d9d9d9 !important;
+  }
+
+  span[class*="ant-input-affix-wrapper-lg"] {
+    padding: 6.5px 11px !important;
+  }
+  span[class*="ant-input-suffix"] {
+    display: block !important;
+    position: relative;
+    top: -2px;
+  }
+}

@@ -1,0 +1,36 @@
+.ant-input-affix-wrapper,
+.ant-input-affix-wrapper-focus {
+  @apply !p-2.5  !border-none !shadow-none !bg-transparent;
+}
+.ant-input-group-addon {
+  @apply !border-none !bg-transparent;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  @apply !border-transparent;
+}
+.ant-input-group-wrapper.ant-input-search {
+  @apply rounded overflow-hidden bg-gray_4;
+}
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button:not(.ant-btn-primary) {
+  @apply !border-none !bg-transparent;
+}
+.ant-input-suffix {
+  @apply hidden !important;
+}
+.ant-input,
+.ant-input::placeholder {
+  @apply bg-transparent font-sans not-italic font-normal text-sm text-gray_1 !important;
+}
+.ant-input-group-addon:last-child {
+  @apply bg-primary !important;
+}
+.ant-btn-primary {
+  @apply !border-none !bg-transparent !shadow-none;
+  border-color: initial !important;
+}
+.ant-btn-primary svg {
+  @apply w-6 h-6;
+}

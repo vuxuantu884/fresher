@@ -1,19 +1,16 @@
-import FooterLayout from './FooterLayout';
-import HeaderLayout from './HeaderLayout';
-import styles from './styles/main.module.scss';
+import { FooterLayout, HeaderLayout } from ".";
+import styles from "./styles/main.module.scss";
 
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-function MainLayout({ children }: Props) {
+export const MainLayout = ({ children }: Props) => {
   return (
-    <div>
+    <div className="max-w-sm my-0 mx-auto bg-gray_4 relative">
       <HeaderLayout />
       <main className={styles.main}>{children}</main>
       <FooterLayout />
     </div>
   );
-}
-
-export default MainLayout;
+};
