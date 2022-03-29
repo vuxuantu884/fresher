@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 
 import { IConArrowDow, IConArrowUp } from "component";
 import { HeaderLayout } from "layouts";
@@ -138,6 +139,8 @@ const data: IData[] = [
 ];
 
 export const CategoryScreen = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <HeaderLayout />
@@ -146,7 +149,7 @@ export const CategoryScreen = () => {
       })}
       <div className="flex justify-center items-center py-[18px] w-full bg-gray_3 cursor-pointer">
         <span className="text-bodyText font-sans font-normal text-sm inline-block mr-1.5">
-          Đóng
+          {t("close")}
         </span>
         <IConArrowUp />
       </div>

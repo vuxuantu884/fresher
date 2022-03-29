@@ -29,8 +29,37 @@
     "footerDesc": "Trang web mua sắm trực tuyến về giày và thời trang",
     "copyRight": "Copyright @ REIKAFASHION.Inc. All Rights Reserved"
   },
+  "info": {
+    "myPersonalPage": "Trang cá nhân của tôi",
+    "orderHistory": "Lịch sử đặt hàng",
+    "shipmentHistoryAndStatus": "Lịch sử và trạng thái xuất hàng",
+    "favoritesFolder": "Thư mục yêu thích",
+    "customerInformation": "Thông tin khách hàng",
+    "shippingAddress": "Địa chỉ gửi hàng"
+  },
+  "search": {
+    "searchHistory": "Search history",
+    "list": "Danh sách",
+    "springCollection": "Spring Collection",
+    "desc": "Túi xách & ví / Túi xách nữ, ví , case, phụ kiện, túi nam, ví, case, phụ kiện",
+    "largeCarryBag": "Túi đựng lớn (đựng quần áo, vật dụng có giá trị lớn)"
+  },
+  "loginPage": {
+    "customersVisit": "Khách hàng truy cập lần đầu tiên",
+    "registering": "Bạn có thẻ sử dụng dịch vụ bằng cách đăng ký thành viên hoàn toàn miễn phí",
+    "signUp": "Đăng ký thành viên",
+    "alreadyAccount": "Bạn đã có tài khoản, vui lòng đăng nhập",
+    "emailAddress": "Địa chỉ email",
+    "canNotLogin": "Không thể đăng nhập",
+    "press": "Ấn vào"
+  },
+  "sale": {
+    "trademark": "Thương hiệu",
+    "applyDiscountCode": "áp dụng mã giảm giá"
+  },
   "login": "Đăng nhập",
   "logout": "Đăng xuất",
+  "password": "Mật khẩu",
   "day": "Ngày",
   "month": "Tháng",
   "week": "Tuần",
@@ -44,5 +73,14 @@
   "free": "Miễn phí",
   "usagePolicy": "Chính sách sử dụng",
   "help": "Trợ giúp",
-  "viewHistory": "Lịch sử xem"
+  "viewHistory": "Lịch sử xem",
+  "winterCollection": "Bộ sưu tập mùa đông",
+  "summerCollection": "Bộ sưu tập mùa hè",
+  "springCollection": "Bộ sưu tập mùa xuân",
+  "close": "Đóng",
+  "mine": "Của tôi",
+  "topSale": "TOP SALE",
+  "favoriteSP": "SP yêu thích",
+  "items": "Mặt hàng: 14 mặt hàng",
+  "productsAvailableInStock": " Sản phẩm có sẵn trong kho"
 }
