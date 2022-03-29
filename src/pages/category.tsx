@@ -1,13 +1,14 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { CoreLayout } from "layouts";
-import { SearchScreen } from "./Search/SearchScreen";
+import { CategoryScreen } from "./Category/CategoryScreen";
 
-const Search = () => {
-  return <SearchScreen />;
+const CategoryPage = () => {
+  return <CategoryScreen />;
 };
 
-Search.Layout = CoreLayout;
+CategoryPage.Layout = CoreLayout;
+
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
@@ -16,4 +17,5 @@ export async function getStaticProps({ locale }: { locale: string }) {
     },
   };
 }
-export default Search;
+
+export default CategoryPage;

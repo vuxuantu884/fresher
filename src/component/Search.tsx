@@ -1,20 +1,33 @@
 import { Input } from "antd";
 import { IConClose } from "component";
+import { useDispatch } from "react-redux";
 
-import styles from "./styles/search.module.scss";
+import { setToggleSearch } from "store";
+
+import styles from "../styles/search.module.scss";
 
 const { Search } = Input;
 
-export const SearchScreen = () => {
+export const ComponentSearch = () => {
+  //page hooks
+  const dispatch = useDispatch();
+
+  const handleToggleSearch = () => {
+    dispatch(setToggleSearch());
+  };
+
   return (
     <>
-      <div className="p-4 flex items-center">
+      <div className="p-4 flex items-center bg-white">
         <Search
           placeholder="Tìm kiếm bằng từ khóa"
           enterButton
           className={styles.customInput}
         />
-        <span className="font-sans text-gray_1 font-normal text-sm inline-block ml-4 cursor-pointer">
+        <span
+          className="font-sans text-gray_1 font-normal text-sm inline-block ml-4 cursor-pointer"
+          onClick={handleToggleSearch}
+        >
           Hủy
         </span>
       </div>

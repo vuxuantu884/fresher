@@ -1,4 +1,5 @@
 import { useTranslation } from "next-i18next";
+import { useDispatch } from "react-redux";
 
 import {
   IConHamburger,
@@ -6,6 +7,7 @@ import {
   IConShoppingCart,
   IConHeart,
 } from "component";
+import { setToggleSearch } from "store";
 
 interface IProps {
   handleToggleMenu: () => void;
@@ -16,6 +18,11 @@ export const HeaderTitle = (props: IProps) => {
   const { handleToggleMenu } = props;
   //page hooks
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+
+  const handleToggleSearch = () => {
+    dispatch(setToggleSearch());
+  };
 
   return (
     <div className="flex bg-white p-4">
@@ -23,7 +30,7 @@ export const HeaderTitle = (props: IProps) => {
         <IConHamburger onClick={handleToggleMenu} />
       </div>
       <div className="">
-        <IConSearch />
+        <IConSearch onClick={handleToggleSearch} />
       </div>
       <div className="flex-1 text-center text-black font-sans not-italic font-bold text-base leading-[19px]">
         {t("home.reikaFashion")}

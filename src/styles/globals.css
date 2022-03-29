@@ -38,9 +38,7 @@ a {
   .btn-add {
     @apply border-[1px] border-solid border-gray_2 rounded w-full text-bodyText font-normal text-xs font-sans py-2;
   }
-  .footer-item {
-    @apply px-4 py-3.5 text-bodyText font-sans not-italic font-normal text-sm border-b-[1px]  border-solid border-gray_4 flex justify-between;
-  }
+
   .title {
     @apply text-base font-bold font-sans not-italic text-bodyText;
   }
@@ -59,7 +57,7 @@ a {
 }
 
 #__next {
-  background-color: #f2f2f2;
+  background-color: rgb(242 242 242 / 20%);
 }
 
 .custom_scroll::-webkit-scrollbar {

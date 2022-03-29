@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import { Fragment, ReactElement, ReactNode } from "react";
 import { Provider } from "react-redux";
 
-import store from "../store";
+import { store } from "store";
 import "../styles/globals.css";
 import nextI18NextConfig from "../../next-i18next.config.js";
 import "antd/dist/antd.css"; //andt css
@@ -38,11 +38,11 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     (({ children }: LayoutProps) => <>{children}</>);
   return (
     <Provider store={store}>
-        <Root>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </Root>
+      <Root>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Root>
     </Provider>
   );
 }
