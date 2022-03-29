@@ -1,5 +1,6 @@
 import { Input } from "antd";
 import { IConClose } from "component";
+import { useTranslation } from "next-i18next";
 import { useDispatch } from "react-redux";
 
 import { setToggleSearch } from "store";
@@ -11,6 +12,7 @@ const { Search } = Input;
 export const ComponentSearch = () => {
   //page hooks
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const handleToggleSearch = () => {
     dispatch(setToggleSearch());
@@ -33,34 +35,29 @@ export const ComponentSearch = () => {
       </div>
       <div className="w-full p-4 bg-gray_4">
         <div className="flex justify-between font-bold text-sm font-sans not-italic">
-          <div className="text-bodyText ">Lịch sử tìm kiếm</div>
-          <div className="text-primary">Danh sách</div>
+          <div className="text-bodyText ">{t("search.searchHistory")}</div>
+          <div className="text-primary">{t("search.list")}</div>
         </div>
       </div>
       <div className="px-4 bg-white text-sm font-sans not-italic text-bodyText">
         <div className="py-4 flex justify-between items-center border-b border-solid border-gray_4">
-          <div className="font-normal ">Bộ sưu tập mùa xuân</div>
+          <div className="font-normal ">{t("search.springCollection")}</div>
           <IConClose className="flex-shrink-0" />
         </div>
         <div className="py-4 flex justify-between items-center border-b border-solid border-gray_4">
-          <div className="font-normal ">
-            Túi xách & ví / Túi xách nữ, ví , case, phụ kiện, túi nam, ví, case,
-            phụ kiện
-          </div>
+          <div className="font-normal ">{t("search.desc")}</div>
           <IConClose className="flex-shrink-0" />
         </div>
         <div className="py-4 flex justify-between items-center border-b border-solid border-gray_4">
-          <div className="font-normal ">
-            Túi đựng lớn (đựng quần áo, vật dụng có giá trị lớn)
-          </div>
+          <div className="font-normal ">{t("search.largeCarryBag")}</div>
           <IConClose className="flex-shrink-0" />
         </div>
         <div className="py-4 flex justify-between items-center border-b border-solid border-gray_4">
-          <div className="font-normal ">Bộ sưu tập mùa đông</div>
+          <div className="font-normal ">{t("search.winterCollection")}</div>
           <IConClose className="flex-shrink-0" />
         </div>
         <div className="py-4 flex justify-between items-center ">
-          <div className="font-normal ">Bộ sưu tập mùa hè</div>
+          <div className="font-normal ">{t("search.summerCollection")}</div>
           <IConClose className="flex-shrink-0" />
         </div>
       </div>

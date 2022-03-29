@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next";
+
 import { ComponentInformation, ComponentProduct, IConTick } from "component";
 import { CHECK_END, CHECK_START } from "constant";
 import { IProduct } from "types";
@@ -58,23 +60,26 @@ const products: IProduct[] = [
 ];
 
 export const WarehouseScreen = () => {
+  //page hooks
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="mt-4 bg-white">
         <div className="border-b border-gray_5 border-solid">
           <div className="px-7 py-4 font-normal font-sans text-sm text-bodyText border-b-2 border-[#C4C4C4] border-solid w-fit">
-            SP yêu thích
+            {t("favoriteSP")}
           </div>
         </div>
         <div className="px-4">
           <div className="py-4 font-sans text-sm text-bodyText flex">
             <span className="font-normal inline-block pr-2 border-r border-gray_4 border-solid">
-              Mặt hàng: 14 mặt hàng
+              {t("items")}
             </span>
             <span className="flex items-center ml-4">
               <IConTick />
               <span className="inline-block ml-1.5">
-                Sản phẩm có sẵn trong kho
+                {t("productsAvailableInStock")}
               </span>
             </span>
           </div>

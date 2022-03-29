@@ -6,6 +6,7 @@ import { CHECK_END, CHECK_START } from "constant";
 import { FooterLayout, HeaderLayout } from "layouts";
 import tailwindConfig from "../../../tailwind.config";
 import { IProduct } from "types";
+import { useTranslation } from "next-i18next";
 
 const fullConfig: TailwindConfig = resolveConfig(tailwindConfig);
 
@@ -100,6 +101,9 @@ const data: IData[] = [
 ];
 
 export const Sale1Screen = () => {
+  //page hooks
+  const { t } = useTranslation();
+
   return (
     <>
       <HeaderLayout />
@@ -108,7 +112,7 @@ export const Sale1Screen = () => {
       </div>
       <div className="bg-[#FFE1ED] p-4">
         <div className="text-center text-bodyText font-bold not-italic text-base mb-4">
-          Bộ sưu tập mùa xuân
+          {t("springCollection")}
         </div>
         <div className="flex gap-y-4 flex-wrap">
           {data.map((data, index) => {
@@ -160,12 +164,14 @@ export const Sale1Screen = () => {
       </div>
       <div className="bg-white p-4 flex gap-x-3">
         <button className="w-1/2 flex justify-center items-center h-[58px] flex-col bg-gray_4 rounded font-sans font-normal">
-          <div className="text-bodyText  text-sm">Thương hiệu</div>
-          <div className="text-gray_1 text-xs">Của tôi</div>
+          <div className="text-bodyText text-sm"> {t("sale.trademark")}</div>
+          <div className="text-gray_1 text-xs">{t("mine")}</div>
         </button>
         <button className="w-1/2 flex justify-center items-center h-[58px] flex-col bg-white rounded font-sans font-normal border border-solid border-primary">
-          <div className="text-bodyText  text-sm">TOP SALE</div>
-          <div className="text-gray_1 text-xs">áp dụng mã giảm giá</div>
+          <div className="text-bodyText  text-sm">{t("topSale")}</div>
+          <div className="text-gray_1 text-xs">
+            {t("sale.applyDiscountCode")}
+          </div>
         </button>
       </div>
       <div className="w-full flex gap-y-6 flex-wrap px-4 bg-white mb-6 pb-4">
