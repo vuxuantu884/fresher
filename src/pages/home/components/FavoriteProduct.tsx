@@ -1,4 +1,5 @@
 import { ComponentProduct } from "component";
+import { CHECK_END, CHECK_START } from "constant";
 import { useTranslation } from "next-i18next";
 
 import { IProduct } from "types";
@@ -64,9 +65,21 @@ export default function HomeFavoriteProduct() {
       <div className="title-desc mb-4 text-center">{t("home.productDesc")}</div>
       <div className="flex gap-y-4 flex-wrap px-4">
         {products.map((data, index) => {
+          //check phan tu dau va phan tu cuoi
+          const check = (index + 1) % 4;
+
           return (
-            <div className="w-1/4 px-1" key={index}>
-              <ComponentProduct data={data} />
+            <div
+              className={`w-1/4 ${
+                check === CHECK_START
+                  ? "pr-1"
+                  : check === CHECK_END
+                  ? "pl-1"
+                  : "px-0.5"
+              }`}
+              key={index}
+            >
+              <ComponentProduct data={data} saleOne saleTwo />
             </div>
           );
         })}

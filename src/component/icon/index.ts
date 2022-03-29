@@ -11,3 +11,4 @@ export * from "./Login";
 export * from "./Pencil";
 export * from "./TimeLine";
 export * from "./Close";
+export * from "./Tick";

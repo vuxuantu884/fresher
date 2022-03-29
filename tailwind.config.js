@@ -1,18 +1,18 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   important: true,
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/libraries/**/*.{js,ts,jsx,tsx}',
-    './src/layouts/**/*.{js,ts,jsx,tsx}',
-    './src/component/**/*.{js,ts,jsx,tsx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/libraries/**/*.{js,ts,jsx,tsx}",
+    "./src/layouts/**/*.{js,ts,jsx,tsx}",
+    "./src/component/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Lato', 'sans-serif', ...defaultTheme.fontFamily.sans],
+        sans: ["Lato", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: "#B61E42",
@@ -23,9 +23,9 @@ module.exports = {
         gray_2: "#BDBDBD",
         gray_3: "#E0E0E0",
         gray_4: "#F2F2F2",
-      }
+        gray_5: "#E5E5E5",
+      },
     },
-
   },
   plugins: [],
 };
