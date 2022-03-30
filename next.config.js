@@ -9,7 +9,6 @@ const nextConfig = {
     styledComponents: true,
   },
   presets: ["next/babel"],
-  pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
 };
 
 module.exports = nextConfig;

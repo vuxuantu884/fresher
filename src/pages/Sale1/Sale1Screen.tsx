@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import resolveConfig from "tailwindcss/resolveConfig";
 import { TailwindConfig } from "tailwindcss/tailwind-config";
 import { useTranslation } from "next-i18next";
@@ -129,7 +130,7 @@ export const Sale1Screen = (props: IProps) => {
     <>
       <HeaderLayout />
       <div className="w-full">
-        <img src={img} className="w-full object-cover" />
+        <img src={img} className="w-full object-cover" alt="" />
       </div>
       <div className={`${color} p-4`}>
         <div className="text-center text-bodyText font-bold not-italic text-base mb-4">
@@ -154,6 +155,7 @@ export const Sale1Screen = (props: IProps) => {
                 <img
                   src={data.img}
                   className="w-full aspect-square object-cover"
+                  alt=""
                 />
                 <div className="mt-1 text-center max-w-[78%] mx-auto">
                   {data.name}
