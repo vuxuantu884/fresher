@@ -8,7 +8,7 @@ export * from "./user";
 export * from "./app";
 const productReducer = combineReducers({
   user: userReducer,
-  local: localeReducer,
+  locale: localeReducer,
   app: appReducer,
 });
 

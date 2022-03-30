@@ -116,12 +116,8 @@ export const WarehouseScreen = () => {
             })}
           </div>
           <div className="w-full py-2 flex justify-center mt-3 border-t border-solid border-gray_4">
-            <button className="flex justify-center items-center w-9 h-9 bg-primary text-white rounded cursor-pointer">
-              1
-            </button>
-            <button className="flex justify-center items-center w-9 h-9 bg-white text-bodyText rounded cursor-pointer">
-              2
-            </button>
+            <button className="btn btn-number-primary">1</button>
+            <button className="btn btn-number-second">2</button>
           </div>
         </div>
       </div>

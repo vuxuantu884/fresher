@@ -7,7 +7,7 @@ import tailwindConfig from "../../../../tailwind.config";
 import "../styles/home.module.css";
 
 const { Search } = Input;
-const fullConfig: TailwindConfig = resolveConfig(tailwindConfig);
+const fullConfig: any = resolveConfig(tailwindConfig);
 
 export default function HomeSearch() {
   return (
