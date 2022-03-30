@@ -5,7 +5,9 @@ import React from "react";
 import { IConLogin } from ".";
 import { IConBook, IConPencil, IConQuestionCircle, IConTimeLine } from "./icon";
 
-export const ComponentMenuMobile = React.forwardRef<any, HTMLDivElement>(
+interface IProps {}
+
+export const ComponentMenuMobile = React.forwardRef<HTMLDivElement, IProps>(
   (props, ref) => {
     //page hooks
     const { t } = useTranslation();

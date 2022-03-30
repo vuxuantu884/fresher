@@ -4,18 +4,18 @@ import { useTranslation } from "next-i18next";
 import { CoreLayout } from "layouts";
 import { Sale1Screen } from "./Sale1/Sale1Screen";
 
-const Sale1Page = () => {
+const Sale2Page = () => {
   const { t } = useTranslation();
   return (
     <Sale1Screen
-      img="/images/sale/sale1.png"
-      title={t("springCollection")}
-      color="bg-[#FFE1ED]"
+      img="/images/sale/sale2.png"
+      title={t("summerCollection")}
+      color="bg-[#FFEBAC]"
     />
   );
 };
 
-Sale1Page.Layout = CoreLayout;
+Sale2Page.Layout = CoreLayout;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -26,4 +26,4 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default Sale1Page;
+export default Sale2Page;

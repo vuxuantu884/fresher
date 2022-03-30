@@ -1,14 +1,16 @@
 import resolveConfig from "tailwindcss/resolveConfig";
 import { TailwindConfig } from "tailwindcss/tailwind-config";
+import { useTranslation } from "next-i18next";
+import Select from "@atlaskit/select";
 
 import { ComponentProduct, IConArrowDow } from "component";
 import { CHECK_END, CHECK_START } from "constant";
 import { FooterLayout, HeaderLayout } from "layouts";
 import tailwindConfig from "../../../tailwind.config";
 import { IProduct } from "types";
-import { useTranslation } from "next-i18next";
+import styles from "./styles/sale.module.scss";
 
-const fullConfig: TailwindConfig = resolveConfig(tailwindConfig);
+const fullConfig: any = resolveConfig(tailwindConfig);
 
 interface IData {
   img: string;
@@ -100,7 +102,26 @@ const data: IData[] = [
   },
 ];
 
-export const Sale1Screen = () => {
+const options = [
+  { label: "Adelaide", value: "adelaide" },
+  { label: "Brisbane", value: "brisbane" },
+  { label: "Canberra", value: "canberra" },
+  { label: "Darwin", value: "darwin" },
+  { label: "Hobart", value: "hobart" },
+  { label: "Melbourne", value: "melbourne" },
+  { label: "Perth", value: "perth" },
+  { label: "Sydney", value: "sydney" },
+];
+
+interface IProps {
+  img: string;
+  title: string;
+  color: string;
+}
+
+export const Sale1Screen = (props: IProps) => {
+  //page props
+  const { img, title, color } = props;
   //page hooks
   const { t } = useTranslation();
 
@@ -108,11 +129,11 @@ export const Sale1Screen = () => {
     <>
       <HeaderLayout />
       <div className="w-full">
-        <img src="/images/sale/sale1.png" className="w-full object-cover" />
+        <img src={img} className="w-full object-cover" />
       </div>
-      <div className="bg-[#FFE1ED] p-4">
+      <div className={`${color} p-4`}>
         <div className="text-center text-bodyText font-bold not-italic text-base mb-4">
-          {t("springCollection")}
+          {title}
         </div>
         <div className="flex gap-y-4 flex-wrap">
           {data.map((data, index) => {
@@ -174,7 +195,7 @@ export const Sale1Screen = () => {
           </div>
         </button>
       </div>
-      <div className="w-full flex gap-y-6 flex-wrap px-4 bg-white mb-6 pb-4">
+      <div className="w-full flex gap-y-6 flex-wrap px-4 bg-white  pb-4">
         {products.map((data, index) => {
           //check phan tu dau va phan tu cuoi
           const check = (index + 1) % 3;
@@ -199,6 +220,27 @@ export const Sale1Screen = () => {
             </div>
           );
         })}
+      </div>
+      <div className="layout-primary bg-white border-y border-gray_4 border-solid flex justify-between w-full items-center">
+        <div className="flex flex-1 items-center">
+          <span className="f-normal inline-block mr-1">{t("classify")}</span>
+          <Select
+            inputId="single-select-example"
+            className={`single-select ${styles.customSelect}`}
+            classNamePrefix="react-select"
+            options={options}
+            placeholder={t("mostPopular")}
+          />
+        </div>
+        <div className="ml-4">1~120 {t("product")}</div>
+      </div>
+      <div className="layout-primary flex bg-white justify-center mb-6">
+        <button className="btn btn-number-primary ">1</button>
+        <button className="btn btn-number-second ">2</button>
+        <button className="btn btn-number-second ">3</button>
+        <button className="btn btn-number-second ">4</button>
+        <button className="btn btn-number-second ">...</button>
+        <button className="btn btn-number-second ">500</button>
       </div>
       <FooterLayout />
     </>

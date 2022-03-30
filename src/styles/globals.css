@@ -21,7 +21,7 @@ a {
 
 @layer components {
   .btn {
-    @apply flex items-center justify-center not-italic;
+    @apply flex items-center justify-center not-italic cursor-pointer;
   }
   .btn-nolmal {
     @apply text-white font-sans text-sm font-normal  py-0.5 px-2 rounded-[35px] border-[1px] border-solid border-white;
@@ -54,6 +54,18 @@ a {
   .btn-login {
     @apply bg-primary text-white text-sm not-italic font-sans font-normal rounded px-6 py-3;
   }
+  .btn-number-primary {
+    @apply w-9 h-9 bg-primary text-white rounded;
+  }
+  .btn-number-second {
+    @apply w-9 h-9 bg-white text-bodyText rounded;
+  }
+  .layout-primary {
+    @apply px-4 py-3;
+  }
+  .f-normal {
+    @apply font-sans font-normal not-italic text-sm text-bodyText;
+  }
 }
 
 #__next {
@@ -63,4 +75,8 @@ a {
 .custom_scroll::-webkit-scrollbar {
   width: 0;
   background-color: transparent;
+}
+
+.single-select {
+  flex: 1;
 }
