@@ -59,7 +59,7 @@ const products: IProduct[] = [
   },
 ];
 
-export const WarehouseScreen = () => {
+const WarehouseScreen = () => {
   //page hooks
   const { t } = useTranslation();
 
@@ -125,3 +125,5 @@ export const WarehouseScreen = () => {
     </>
   );
 };
+
+export default WarehouseScreen;

@@ -138,7 +138,7 @@ const data: IData[] = [
   },
 ];
 
-export const CategoryScreen = () => {
+const CategoryScreen = () => {
   const { t } = useTranslation();
 
   return (
@@ -156,6 +156,8 @@ export const CategoryScreen = () => {
     </>
   );
 };
+
+export default CategoryScreen;
 
 interface IPropsCategory {
   data: IData;

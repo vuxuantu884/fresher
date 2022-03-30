@@ -40,7 +40,7 @@ const searchCategory: ISearchByCategory[] = [
   },
 ];
 
-export const SearchByCategory = () => {
+const SearchByCategory = () => {
   //page hooks
   const { t } = useTranslation();
 
@@ -86,3 +86,5 @@ export const SearchByCategory = () => {
     </div>
   );
 };
+
+export default SearchByCategory;

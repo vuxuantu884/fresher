@@ -1,7 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { CoreLayout } from "layouts";
-import { CategoryScreen } from "./Category/CategoryScreen";
+import CategoryScreen from "./Category/CategoryScreen";
 
 const CategoryPage = () => {
   return <CategoryScreen />;

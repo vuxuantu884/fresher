@@ -51,7 +51,7 @@ const searchRanking: ISearchRanking[] = [
   },
 ];
 
-export const SearchRanking = () => {
+const SearchRanking = () => {
   //page hooks
   const { t } = useTranslation();
 
@@ -91,3 +91,5 @@ export const SearchRanking = () => {
     </div>
   );
 };
+
+export default SearchRanking;

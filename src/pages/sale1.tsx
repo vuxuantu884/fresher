@@ -2,7 +2,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import { CoreLayout } from "layouts";
-import { Sale1Screen } from "./Sale1/Sale1Screen";
+import Sale1Screen from "./Sale1/Sale1Screen";
 
 const Sale1Page = () => {
   const { t } = useTranslation();

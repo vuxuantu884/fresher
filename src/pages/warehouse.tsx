@@ -1,7 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { MainLayout } from "layouts";
-import { WarehouseScreen } from "./Warehouse/WarehouseScreen";
+import WarehouseScreen from "./Warehouse/WarehouseScreen";
 
 const WarehousePage = () => {
   return <WarehouseScreen />;

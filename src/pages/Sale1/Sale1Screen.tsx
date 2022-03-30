@@ -17,6 +17,7 @@ interface IData {
   img: string;
   name: string;
 }
+
 const products: IProduct[] = [
   {
     img: "/images/product/product1.png",
@@ -120,7 +121,7 @@ interface IProps {
   color: string;
 }
 
-export const Sale1Screen = (props: IProps) => {
+const Sale1Screen = (props: IProps) => {
   //page props
   const { img, title, color } = props;
   //page hooks
@@ -248,3 +249,5 @@ export const Sale1Screen = (props: IProps) => {
     </>
   );
 };
+
+export default Sale1Screen;
