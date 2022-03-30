@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { IConArrowDow } from "component";
 import { useTranslation } from "next-i18next";
 
@@ -61,7 +62,7 @@ export const SearchByCategory = () => {
         {searchCategory.map((data, index) => {
           return (
             <div className="w-fit mr-2 text-center inline-block" key={index}>
-              <img src={data.img} className="rounded-[50%]" />
+              <img src={data.img} className="rounded-[50%]" alt="" />
               <div className="mt-1.5 text-bodyText font-normal text-base font-sans">
                 {data.name}
               </div>

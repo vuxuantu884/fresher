@@ -23,7 +23,6 @@ interface LayoutProps {
 
 function Root(props: any) {
   // useInitLocale();
-
   return (
     <Fragment>
       {props.children}

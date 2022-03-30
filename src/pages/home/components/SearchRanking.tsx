@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useTranslation } from "next-i18next";
 
 import { ISearchRanking } from "types";
@@ -69,11 +70,11 @@ export const SearchRanking = () => {
           return (
             <div className="w-2/6 relative mx-[-6px]" key={index}>
               <div className="w-full rounded overflow-hidden">
-                <img src={data.img} className="w-full object-cover" />
+                <img src={data.img} className="w-full object-cover" alt="" />
               </div>
               <div className="absolute bg-[#00000038] inset-0 rounded overflow-hidden flex justify-center items-center">
                 <div className="w-fit absolute top-0 left-0">
-                  <img src="/images/searchRanking/exclude.png" />
+                  <img src="/images/searchRanking/exclude.png" alt="" />
                   <div className="absolute top-[2px] left-1 text-[9px] font-bold text-white">
                     {data.value}
                   </div>
