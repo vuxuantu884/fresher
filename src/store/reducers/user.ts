@@ -2,36 +2,41 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "store";
 import { User } from "types/user.types";
 
-interface UserState {
-  user?: User;
+interface IState {
+  user?: string;
   token?: string;
 }
 
+const initialState: IState = {
+  user: "",
+  token: "",
+};
+
 export const userSlice = createSlice({
-  name: 'user',
-  initialState: {
-    user: undefined,
-  },
+  name: "user",
+  initialState,
   reducers: {
     // Cần đặt tên có đuôi Action
-    setUserAction: (state: UserState, action: PayloadAction<User>) => {
-      state.user = action.payload;
+    setUserAction: (state) => {
+      state.token = "token";
     },
-    removeUserAction: (state: UserState) => {
+    logout: () => {
+      return initialState;
+    },
+    removeUserAction: (state) => {
       state.user = undefined;
     },
-    updateUserAction: (state: UserState, action: PayloadAction<User>) => {
-      if (action.payload) {
-        state.user = state.user ? { ...state.user, ...action.payload  } : action.payload;
-      }
-    }
+    updateUserAction: (state, action: PayloadAction<User>) => {
+      //
+    },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { setUserAction, removeUserAction, updateUserAction } = userSlice.actions;
+export const { setUserAction, removeUserAction, updateUserAction, logout } =
+  userSlice.actions;
 
 // cần đặt tên có đuôi Store
-export const getUserStore = (state: RootState) => state.user.user;
+export const selectUser = (state: RootState) => state.user;
 
-export default userSlice.reducer
+export default userSlice.reducer;

@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 
 import {
   IConHamburger,
@@ -8,6 +9,7 @@ import {
   IConHeart,
 } from "component";
 import { setToggleSearch } from "store";
+import { PATH_HOME } from "constant";
 
 interface IProps {
   handleToggleMenu: () => void;
@@ -19,9 +21,14 @@ export const HeaderTitle = (props: IProps) => {
   //page hooks
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const route = useRouter();
 
   const handleToggleSearch = () => {
     dispatch(setToggleSearch());
+  };
+
+  const handleReturnHome = () => {
+    route.push(PATH_HOME);
   };
 
   return (
@@ -33,7 +40,9 @@ export const HeaderTitle = (props: IProps) => {
         <IConSearch onClick={handleToggleSearch} />
       </div>
       <div className="flex-1 text-center text-black font-sans not-italic font-bold text-base leading-[19px]">
-        {t("home.reikaFashion")}
+        <span onClick={handleReturnHome} className="cursor-pointer">
+          {t("home.reikaFashion")}
+        </span>
       </div>
       <div className="mr-4">
         <IConHeart />

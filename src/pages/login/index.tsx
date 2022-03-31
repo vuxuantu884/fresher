@@ -44,7 +44,9 @@ const LoginPage = () => {
             />
           </div>
           <div className="w-full flex justify-center mb-3.5">
-            <button className="btn btn-login">{t("login")}</button>
+            <button className="btn btn-login" onClick={onLogin}>
+              {t("login")}
+            </button>
           </div>
           <div className="text-right">
             <span className="text-gray_1">{t("loginPage.canNotLogin")}?</span>{" "}

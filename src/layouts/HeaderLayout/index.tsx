@@ -67,7 +67,9 @@ export const HeaderLayout = () => {
         </div>
         <HeaderMenu />
       </div>
-      {showMenu && <ComponentMenuMobile ref={ref} />}
+      {showMenu && (
+        <ComponentMenuMobile ref={ref} handleToggleMenu={handleToggleMenu} />
+      )}
     </>
   );
 };

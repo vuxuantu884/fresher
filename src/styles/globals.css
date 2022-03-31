@@ -69,11 +69,20 @@ a {
   .f-normal {
     @apply font-sans font-normal not-italic text-sm text-bodyText;
   }
+  .f-bold {
+    @apply font-sans font-bold not-italic text-sm text-bodyText;
+  }
+  .f-base {
+    @apply font-sans font-bold not-italic text-base text-bodyText;
+  }
   .center {
     @apply flex justify-center items-center;
   }
   .btn-color {
     @apply w-[18px] h-[18px] rounded-sm;
+  }
+  .btn-sub {
+    @apply font-semibold px-8 py-2 bg-primary rounded-full text-white not-italic font-sans;
   }
   .text-long {
     @apply whitespace-nowrap overflow-hidden text-ellipsis;
