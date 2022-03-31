@@ -1,0 +1,16 @@
+.customSelect {
+  div[class*="react-select__control"] {
+    border-radius: 4px;
+    border: 1px solid theme("colors.gray_4") !important;
+    background-color: #fff !important;
+    min-height: initial;
+    height: 36px;
+  }
+  path {
+    fill: #b61e42 !important;
+  }
+  //   div[class*="react-select__control"] {
+  //     height: 30px !important;
+  //     min-height: initial !important;
+  //   }
+}

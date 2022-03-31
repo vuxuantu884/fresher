@@ -12,6 +12,7 @@ interface Props {
 export const MainLayout = ({ children }: Props) => {
   //page redux
   const { search } = useSelector(selectApp);
+  console.log(search);
   return (
     <>
       <div className="max-w-sm min-h-screen my-0 mx-auto bg-gray_4 relative">

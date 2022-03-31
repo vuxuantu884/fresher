@@ -7,7 +7,6 @@ module.exports = {
     defaultNS: "common",
     localeDetection: false,
     localePath: path.resolve("./src/languages"),
-    reloadOnPrerender: process.env.NODE_ENV === "development",
     domains: [
       {
         domain: "*",

@@ -7,11 +7,13 @@ import Sale1Screen from "./Sale1/Sale1Screen";
 const Sale2Page = () => {
   const { t } = useTranslation();
   return (
-    <Sale1Screen
-      img="/images/sale/sale2.png"
-      title={t("summerCollection")}
-      color="bg-[#FFEBAC]"
-    />
+    <>
+      <Sale1Screen
+        img="/images/sale/sale2.png"
+        title={t("summerCollection")}
+        color="bg-[#FFEBAC]"
+      />
+    </>
   );
 };
 

@@ -53,11 +53,11 @@ export const ComponentSearch = () => {
           <IConClose className="flex-shrink-0" />
         </div>
         <div className="py-4 flex justify-between items-center border-b border-solid border-gray_4">
-          <div className="font-normal ">{t("search.winterCollection")}</div>
+          <div className="font-normal ">{t("winterCollection")}</div>
           <IConClose className="flex-shrink-0" />
         </div>
         <div className="py-4 flex justify-between items-center ">
-          <div className="font-normal ">{t("search.summerCollection")}</div>
+          <div className="font-normal ">{t("summerCollection")}</div>
           <IConClose className="flex-shrink-0" />
         </div>
       </div>

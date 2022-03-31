@@ -5,3 +5,5 @@ export * from "./Icon.types";
 export * from "./product.type";
 export * from "./searchRanking.type";
 export * from "./searchByCategory.type";
+export * from "./banner.types";
+export * from "./colors.types";

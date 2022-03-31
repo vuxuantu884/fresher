@@ -3,8 +3,9 @@ import { appWithTranslation } from "next-i18next";
 import { NextPage } from "next";
 import { Fragment, ReactElement, ReactNode } from "react";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
-import { store } from "store";
+import { persistor, store } from "store";
 import "../styles/globals.css";
 import nextI18NextConfig from "../../next-i18next.config.js";
 import "antd/dist/antd.css"; //andt css
@@ -37,11 +38,13 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     (({ children }: LayoutProps) => <>{children}</>);
   return (
     <Provider store={store}>
-      <Root>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Root>
+      <PersistGate loading={null} persistor={persistor}>
+        <Root>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Root>
+      </PersistGate>
     </Provider>
   );
 }

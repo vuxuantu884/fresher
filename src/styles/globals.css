@@ -32,6 +32,9 @@ a {
   .btn-primary-full {
     @apply bg-primary py-[17px] rounded not-italic text-sm font-normal text-white w-full;
   }
+  .btn-sub-full {
+    @apply bg-primary py-3 rounded not-italic text-sm font-normal text-white w-full;
+  }
   .btn-second {
     @apply px-[45px] py-[7px] rounded not-italic text-sm font-normal text-second border-second border-solid border-[1px];
   }
@@ -65,6 +68,15 @@ a {
   }
   .f-normal {
     @apply font-sans font-normal not-italic text-sm text-bodyText;
+  }
+  .center {
+    @apply flex justify-center items-center;
+  }
+  .btn-color {
+    @apply w-[18px] h-[18px] rounded-sm;
+  }
+  .text-long {
+    @apply whitespace-nowrap overflow-hidden text-ellipsis;
   }
 }
 

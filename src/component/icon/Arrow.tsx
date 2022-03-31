@@ -75,3 +75,30 @@ export const IConArrowUp = (props: ICon) => {
     </svg>
   );
 };
+
+export const IConArrowLeft = (props: ICon) => {
+  //page props
+  const {
+    width = 20,
+    height = 20,
+    color = "#BDBDBD",
+    onClick,
+    className,
+  } = props;
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className ? className + " cursor-pointer" : "cursor-pointer"}
+    >
+      <path
+        d="M12.9003 4.18306C13.1222 4.40495 13.1423 4.75217 12.9608 4.99684L12.9003 5.06694L7.50916 10.4583L12.9003 15.8497C13.1222 16.0716 13.1423 16.4188 12.9608 16.6635L12.9003 16.7336C12.6784 16.9555 12.3312 16.9757 12.0865 16.7941L12.0164 16.7336L6.18305 10.9003C5.96116 10.6784 5.94099 10.3312 6.12254 10.0865L6.18305 10.0164L12.0164 4.18306C12.2605 3.93898 12.6562 3.93898 12.9003 4.18306Z"
+        fill={color}
+      />
+    </svg>
+  );
+};
