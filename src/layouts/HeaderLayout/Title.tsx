@@ -12,7 +12,7 @@ import { setToggleSearch } from "store";
 import { PATH_HOME } from "constant";
 
 interface IProps {
-  handleToggleMenu: () => void;
+  handleToggleMenu?: () => void;
 }
 
 export const HeaderTitle = (props: IProps) => {

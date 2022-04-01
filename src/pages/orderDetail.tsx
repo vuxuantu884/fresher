@@ -1,13 +1,13 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { CoreLayout } from "layouts";
-import PointScreen from "./Point/PointScreen";
+import { MainLayout } from "layouts";
+import OrderDetailScreen from "./OrderDetails/OrderDetailScreen";
 
-const PointPage = () => {
-  return <PointScreen />;
+const OrderDetailPage = () => {
+  return <OrderDetailScreen />;
 };
 
-PointPage.Layout = CoreLayout;
+OrderDetailPage.Layout = MainLayout;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -18,4 +18,4 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default PointPage;
+export default OrderDetailPage;

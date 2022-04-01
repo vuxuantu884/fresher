@@ -1,11 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { IConFileText } from "component";
+import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+
+import { IConFileText } from "component";
+import { PATH_POINT } from "constant";
+import Link from "next/link";
 
 const ProfileScreen = () => {
   //page hooks
   const { t } = useTranslation();
+  const route = useRouter();
 
   return (
     <>
@@ -31,7 +36,9 @@ const ProfileScreen = () => {
       {/* diem*/}
       <div className="p-4 bg-white mt-4">
         <div className="w-full flex justify-center mb-4">
-          <button className="btn btn-sub">{t("point")}</button>
+          <Link href={PATH_POINT || ""} passHref>
+            <button className="btn btn-sub">{t("point")}</button>
+          </Link>
         </div>
         <div className="w-full flex justify-center f-normal font-bold text-[32px]">
           728

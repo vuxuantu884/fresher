@@ -68,6 +68,14 @@
     "searchResults": "Kết quả tìm kiếm cho sản phẩm đã chọn",
     "searchProduct": "Tìm kiếm sản phẩm này"
   },
+  "pointPage": {
+    "scoreHistory": "Lịch sử điểm",
+    "pointType": "Loại điểm",
+    "releaseDate": "Ngày phát hành",
+    "numberOfPointsReceived": "Số điểm nhận",
+    "pointsUsed": "Số điểm dùng",
+    "codeOrders": "Mã đơn hàng"
+  },
   "login": "Đăng nhập",
   "logout": "Đăng xuất",
   "password": "Mật khẩu",
@@ -124,5 +132,16 @@
   "orderDetails": "Chi tiết đơn hàng, và các thủ tục khác (hủy bỏ, thay khác,...)",
   "aboutOrder": "Hỏi về đơn hàng này",
   "menu": "Menu",
-  "total": "Tổng"
+  "total": "Tổng",
+  "orderDetail": "Chi tiết đơn hàng",
+  "deliveryMethod": "Phương thức giao hàng",
+  "votes": "Số phiếu",
+  "deliveryinformation": "Thông tin giao nhận",
+  "receivedDate": "Ngày nhận",
+  "informationLine": "Thông tin đơn hàng",
+  "product'sName": "Tên sản phẩm",
+  "size": "Kích thước",
+  "present": "Quà tặng",
+  "amount": "Số lượng",
+  "price": "Giá"
 }
