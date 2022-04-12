@@ -1,0 +1,123 @@
+.customAtlaskit {
+  /* input atlaskit, radio */
+  #name-uid2-label,
+  #surname-uid4-label,
+  #mail-uid6-label,
+  #radio-group-uid8-label,
+  #datetime-picker-uid10-label,
+  label {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #4f4f4f;
+  }
+  /* flex  radiogroup */
+  div[role*="radiogroup"] {
+    display: flex;
+  }
+
+  div[role*="radiogroup"] label {
+    margin-right: 24px;
+  }
+}
+
+.customeInut {
+  input,
+  input::placeholder,
+  #province-uid2:disabled {
+    color: #b61e42 !important;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    -webkit-text-fill-color: initial !important;
+  }
+}
+
+.customArea {
+  textarea {
+    border: none !important;
+    background: #fff !important;
+    position: relative;
+    top: 8px;
+  }
+}
+.customForm {
+  & > div {
+    display: flex;
+    align-items: center;
+    & > div {
+      width: 100px;
+      border-radius: 4px;
+    }
+    label {
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 13px;
+      color: #929292;
+      width: 45px;
+    }
+  }
+  div[class*="-control"] {
+    min-height: initial;
+    min-height: 36px;
+  }
+  div[role="presentation"] {
+    width: 100%;
+    border-radius: 4px;
+    margin-left: 6px;
+  }
+}
+.customForm2 {
+  & > div {
+    margin-top: 0;
+  }
+  label {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+    color: #929292;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+}
+
+.custom3 {
+  label[class*="-Radio"] {
+    flex: 1;
+    margin-bottom: 16px;
+    align-items: center;
+    span {
+      display: block;
+      padding: 8px 12px;
+      background: #e0e0e0;
+      border-radius: 4px;
+      color: #000000;
+      font-family: "Inter" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      flex: 1;
+      margin-left: 8px;
+    }
+  }
+}
+.custom3 {
+  label[data-testid*="--checkbox-label"] {
+    span {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #929292;
+    }
+  }
+}

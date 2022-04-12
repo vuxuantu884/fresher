@@ -1,24 +1,32 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-
-import { IConFileText } from "component";
-import { PATH_POINT } from "constant";
+import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
+
+import { ComponentRank, IConFileText } from "component";
+import { PATH_POINT } from "constant";
+import { selectApp, setTogglePopup } from "store";
 
 const ProfileScreen = () => {
   //page hooks
   const { t } = useTranslation();
-  const route = useRouter();
+  const dispatch = useDispatch();
+  //redux state
+  const { popup } = useSelector(selectApp);
+
+  const handleRank = () => {
+    dispatch(setTogglePopup());
+  };
 
   return (
     <>
+      {popup && <ComponentRank />}
       <div className="p-4 bg-white border-t border-solid border-gray_4 f-normal font-semibold">
         {t("personalPage")}
       </div>
       {/* Rank */}
-      <div className="w-full relative">
+      <div className="w-full relative cursor-pointer" onClick={handleRank}>
         <img className="w-full object-cover" alt="" src="/images/bgRank.png" />
         <div className="absolute inset-0 flex flex-col justify-between items-center p-2">
           <div className="f-normal text-base font-bold text-black">
@@ -138,9 +146,7 @@ const ProfileScreen = () => {
         <div className="w-full center f-normal py-3 bg-gray_4 rounded border-solid border border-primary mb-2">
           <button className="btn w-[70%]">{t("orderDetails")}</button>
         </div>
-        <button className="w-full py-3 rounded border-solid border border-primary text-primary">
-          {t("aboutOrder")}
-        </button>
+        <button className="btn btn-sub-primary">{t("aboutOrder")}</button>
       </div>
     </>
   );

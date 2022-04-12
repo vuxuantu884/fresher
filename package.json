@@ -16,7 +16,17 @@
     "deploy:uat": "./deploy/manual-deploy-uat.sh"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@atlaskit/avatar": "^20.5.8",
+    "@atlaskit/button": "^16.2.1",
+    "@atlaskit/checkbox": "^12.3.11",
+    "@atlaskit/datetime-picker": "^11.1.7",
+    "@atlaskit/form": "^8.5.2",
+    "@atlaskit/radio": "^5.3.8",
+    "@atlaskit/range": "^6.0.3",
     "@atlaskit/select": "^15.2.10",
+    "@atlaskit/textarea": "^4.3.2",
+    "@atlaskit/textfield": "^5.1.8",
     "@reduxjs/toolkit": "^1.8.0",
     "antd": "^4.19.3",
     "axios": "^0.26.1",

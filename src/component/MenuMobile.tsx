@@ -1,4 +1,4 @@
-import { PATH_LOGIN, PATH_PROFILE } from "constant";
+import { PATH_LOGIN, PATH_MESSAGE_CENTER, PATH_PROFILE } from "constant";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -31,7 +31,7 @@ export const ComponentMenuMobile = React.forwardRef<HTMLDivElement, IProps>(
     const { token } = useSelector(selectUser);
 
     return (
-      <div className="absolute inset-0 bg-black/40 z-10">
+      <div className="bg-popup">
         <div className="bg-white h-full min-w-[70%] w-fit" ref={ref}>
           {token ? (
             <MenuMobileLogin handleToggleMenu={handleToggleMenu} />
@@ -130,15 +130,22 @@ const MenuMobileLogin = (props: IProps) => {
       <div className="w-full p-4 border-y border-gray_4 border-solid   f-normal text-sm font-semibold ">
         <div className="flex items-center mb-4">
           <IConFileText />
-          <Link href="/login" passHref>
-            <div className="ml-4 cursor-pointer text-bodyText">
+          <Link href={PATH_LOGIN} passHref>
+            <div
+              className="ml-4 cursor-pointer text-bodyText"
+              onClick={handleToggleMenu}
+            >
               {t("info.orderHistory")}
             </div>
           </Link>
         </div>
         <div className="flex items-center  mb-4">
           <IConChat />
-          <div className="ml-4 cursor-pointer">{t("messageCenter")}</div>
+          <Link href={PATH_MESSAGE_CENTER} passHref>
+            <div className="ml-4 cursor-pointer" onClick={handleToggleMenu}>
+              {t("messageCenter")}
+            </div>
+          </Link>
         </div>
         <div className="flex items-center mb-4">
           <IConBook width={24} height={24} />

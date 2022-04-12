@@ -1,6 +1,5 @@
 import { Input } from "antd";
 import resolveConfig from "tailwindcss/resolveConfig";
-import { TailwindConfig } from "tailwindcss/tailwind-config";
 
 import { IConSearch } from "component";
 import tailwindConfig from "../../../../tailwind.config";

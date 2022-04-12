@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700;900&display=swap");
 @import "./input.css";
 html,
 body {
@@ -18,7 +19,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
 @layer components {
   .btn {
     @apply flex items-center justify-center not-italic cursor-pointer;
@@ -32,9 +32,7 @@ a {
   .btn-primary-full {
     @apply bg-primary py-[17px] rounded not-italic text-sm font-normal text-white w-full;
   }
-  .btn-sub-full {
-    @apply bg-primary py-3 rounded not-italic text-sm font-normal text-white w-full;
-  }
+
   .btn-second {
     @apply px-[45px] py-[7px] rounded not-italic text-sm font-normal text-second border-second border-solid border-[1px];
   }
@@ -55,13 +53,25 @@ a {
     @apply bg-gray_4 px-1.5 py-1 text-bodyText text-sm not-italic font-sans font-normal rounded;
   }
   .btn-login {
-    @apply bg-primary text-white text-sm not-italic font-sans font-normal rounded px-6 py-3;
+    @apply !bg-primary !text-white !text-sm !not-italic !font-sans !font-normal !rounded !px-6 !py-3;
   }
   .btn-number-primary {
     @apply w-9 h-9 bg-primary text-white rounded;
   }
   .btn-number-second {
     @apply w-9 h-9 bg-white text-bodyText rounded;
+  }
+  .btn-sub-full {
+    @apply !bg-primary !py-3 !rounded !f-normal !text-white !w-full;
+  }
+  .btn-sub-primary {
+    @apply !w-full !py-3 !rounded !border-solid !border !border-primary !text-primary !f-normal !bg-white;
+  }
+  .btn-sub-primary-black {
+    @apply w-full py-3 rounded border-solid border border-bodyText text-bodyText;
+  }
+  .btn-repurchase {
+    @apply bg-primary text-white rounded px-6 py-2;
   }
   .layout-primary {
     @apply px-4 py-3;
@@ -87,6 +97,24 @@ a {
   .text-long {
     @apply whitespace-nowrap overflow-hidden text-ellipsis;
   }
+  .bg-popup {
+    @apply absolute inset-0 bg-black/40 z-10;
+  }
+
+  /* btn address */
+  .btn-address {
+    @apply py-[10px] px-3 border border-solid rounded border-gray_3;
+  }
+  .btn-address-full {
+    @apply py-[10px] w-full border border-solid rounded border-gray_3;
+  }
+  /* btn search */
+  .btn-small-primary {
+    @apply py-1.5 px-2 border border-solid border-primary rounded-sm text-primary f-normal text-xs bg-white;
+  }
+  .btn-small-sub {
+    @apply py-1.5 px-2 border border-solid border-gray_3 rounded-sm text-gray_2 f-normal text-xs bg-white;
+  }
 }
 
 #__next {
@@ -100,4 +128,30 @@ a {
 
 .single-select {
   flex: 1;
+}
+
+input[type="radio"]:checked {
+  background-color: #b61e42;
+  border: calc(2px * 12 / 7) solid #b61e42;
+}
+
+#example-text-uid16-label {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #4f4f4f;
+}
+.react-select__indicators,
+.react-select__indicator {
+  padding: 0 !important;
+}
+.react-select__control {
+  height: 32px !important;
+  min-height: initial !important;
+  background: white !important;
+}
+input[type="range"] {
+  height: 8px;
 }

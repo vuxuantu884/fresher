@@ -45,3 +45,26 @@ export enum eumColors {
   OTHER = "Other",
   ALL = "Tất cả",
 }
+
+export enum enumStatusTransfer {
+  NOT_DELIVERED = "Chưa chuyển",
+  SUCCESSFUL_TRANSFER = "Chuyển thành công",
+}
+
+export enum enumValidate {
+  REQUIRED = "required",
+  PASSWORD = "password",
+  EMAIL = "email",
+}
+
+export enum enumPassword {
+  CURRENT_PASSWORD = "current password",
+  NEW_PASSWORD = "new password",
+  ENTER_PASSWORD_PASSWORD = "enter new password",
+}
+
+export enum enumAddressType {
+  PROVINCE = "Tỉnh/Thành phố",
+  DISTRICTS = "Quận/Huyện",
+  WARDS = "Phường/Xã",
+}

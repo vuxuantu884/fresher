@@ -102,3 +102,66 @@ export const IConArrowLeft = (props: ICon) => {
     </svg>
   );
 };
+
+export const IConArrowDoubleLeft = (props: ICon) => {
+  //page props
+  const {
+    width = 18,
+    height = 18,
+    color = "#B61E42",
+    onClick,
+    className,
+  } = props;
+
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className ? className + " cursor-pointer" : "cursor-pointer"}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M9.21967 4.71967C9.51256 4.42678 9.98744 4.42678 10.2803 4.71967L14.0303 8.46967C14.3232 8.76256 14.3232 9.23744 14.0303 9.53033L10.2803 13.2803C9.98744 13.5732 9.51256 13.5732 9.21967 13.2803C8.92678 12.9874 8.92678 12.5126 9.21967 12.2197L12.4393 9L9.21967 5.78033C8.92678 5.48744 8.92678 5.01256 9.21967 4.71967Z"
+        fill={color}
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M3.96967 4.71967C4.26256 4.42678 4.73744 4.42678 5.03033 4.71967L8.78033 8.46967C9.07322 8.76256 9.07322 9.23744 8.78033 9.53033L5.03033 13.2803C4.73744 13.5732 4.26256 13.5732 3.96967 13.2803C3.67678 12.9874 3.67678 12.5126 3.96967 12.2197L7.18934 9L3.96967 5.78033C3.67678 5.48744 3.67678 5.01256 3.96967 4.71967Z"
+        fill={color}
+      />
+    </svg>
+  );
+};
+
+export const IConArrowDownVector = (props: ICon) => {
+  //page props
+  const {
+    width = 9,
+    height = 5,
+    color = "#C4C4C4",
+    onClick,
+    className,
+  } = props;
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 9 5"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className ? className + " cursor-pointer" : "cursor-pointer"}
+    >
+      <path
+        d="M4.27701 4.75223L0.450621 0.500689C0.276869 0.307633 0.413878 0 0.673609 0H8.32639C8.58612 0 8.72313 0.307633 8.54938 0.50069L4.72299 4.75224C4.60382 4.88465 4.39618 4.88465 4.27701 4.75223Z"
+        fill={color}
+      />
+    </svg>
+  );
+};

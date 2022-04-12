@@ -8,3 +8,4 @@ export * from "./searchByCategory.type";
 export * from "./banner.types";
 export * from "./colors.types";
 export * from "./point.types";
+export * from "./province.type";

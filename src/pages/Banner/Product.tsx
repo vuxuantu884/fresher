@@ -97,7 +97,7 @@ const BannerProduct = () => {
                 })}
 
               <div
-                className={`absolute inset-0 bg-black/40 ${
+                className={`bg-popup ${
                   check === CHECK_START
                     ? "mr-1"
                     : check === CHECK_END

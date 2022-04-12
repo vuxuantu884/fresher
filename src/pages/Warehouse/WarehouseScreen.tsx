@@ -103,11 +103,11 @@ const WarehouseScreen = () => {
                   <div className="mt-2">
                     {data.status ? (
                       <button className="btn btn-primary-full py-2 text-[11px]">
-                        Thêm vào giỏ hàng
+                        {t("addToCart")}
                       </button>
                     ) : (
                       <div className="text-gray_1 font-normal font-sans text-xs not-italic">
-                        Hết hàng
+                        {t("outOfStock")}
                       </div>
                     )}
                   </div>

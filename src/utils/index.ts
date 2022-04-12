@@ -5,3 +5,4 @@ export * from "./onClickOutside";
 export * from "./sticky.utils";
 export * from "./dimensionHook";
 export * from "./convertBase64";
+export * from "./validate";

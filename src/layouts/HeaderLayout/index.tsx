@@ -32,6 +32,7 @@ export const HeaderLayout = () => {
               objectFit="cover"
               quality={100}
               priority
+              alt=""
             />
           </div>
           <div className="w-1/2 relative">
@@ -41,6 +42,7 @@ export const HeaderLayout = () => {
               objectFit="cover"
               quality={100}
               priority
+              alt=""
             />
           </div>
         </div>
@@ -53,6 +55,7 @@ export const HeaderLayout = () => {
               objectFit="cover"
               quality={100}
               priority
+              alt=""
             />
           </div>
           <div className="w-1/2 relative">
@@ -62,6 +65,7 @@ export const HeaderLayout = () => {
               objectFit="cover"
               quality={100}
               priority
+              alt=""
             />
           </div>
         </div>

@@ -11,18 +11,32 @@ interface Props {
 
 export const MainLayout = ({ children }: Props) => {
   //page redux
-  const { search } = useSelector(selectApp);
+  const {
+    search,
+    popup,
+    popupCancellation,
+    popupSelectTheQuestionProblem,
+    deliveryRecords,
+    editAddress,
+  } = useSelector(selectApp);
+
+  const checkedPopup =
+    popupCancellation || popup || popupSelectTheQuestionProblem;
 
   return (
     <>
-      <div className="max-w-sm min-h-screen my-0 mx-auto bg-gray_4 relative">
+      <div
+        className={`max-w-sm min-h-screen my-0 mx-auto bg-gray_4 relative ${
+          checkedPopup ? "h-screen overflow-hidden" : ""
+        }`}
+      >
         {search ? (
           <ComponentSearch />
         ) : (
           <>
-            <HeaderLayout />
+            {!deliveryRecords && !editAddress && <HeaderLayout />}
             <main className={styles.main}>{children}</main>
-            <FooterLayout />
+            {!deliveryRecords && !editAddress && <FooterLayout />}
           </>
         )}
       </div>
