@@ -6,8 +6,7 @@ import Form, { ErrorMessage, Field, ValidMessage } from "@atlaskit/form";
 import TextArea from "@atlaskit/textarea";
 
 import { IConEdit, IConInformationSub } from "component";
-
-export const OrderSuccessScreen = () => {
+const OrderSuccessScreen = () => {
   //page hooks
   const { t } = useTranslation();
 
@@ -71,3 +70,5 @@ export const OrderSuccessScreen = () => {
     </>
   );
 };
+
+export default OrderSuccessScreen;

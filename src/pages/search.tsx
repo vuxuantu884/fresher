@@ -1,7 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { CoreLayout } from "layouts";
-import { SearchScreen } from "./Search/SearchScreen";
+import SearchScreen from "./Search/SearchScreen";
 
 const SearchPage = () => {
   return <SearchScreen />;

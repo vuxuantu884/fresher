@@ -1,13 +1,13 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { MainLayout } from "layouts";
-import { OrderSuccessScreen } from "./OrderSuccess/OrderSuccessScreen";
+import OrderSuccessScreen from "./OrderSuccess/OrderSuccessScreen";
 
-const OrderSucessPage = () => {
+const OrderSuccessPage = () => {
   return <OrderSuccessScreen />;
 };
 
-OrderSucessPage.Layout = MainLayout;
+OrderSuccessPage.Layout = MainLayout;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -18,4 +18,4 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default OrderSucessPage;
+export default OrderSuccessPage;
