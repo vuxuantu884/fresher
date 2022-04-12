@@ -27,7 +27,7 @@ const options = [
   { label: "Sydney", value: "sydney" },
 ];
 
-export const SearchScreen = () => {
+const SearchScreen = () => {
   //page hooks
   const { t } = useTranslation();
   return (
@@ -185,3 +185,5 @@ export const SearchScreen = () => {
     </>
   );
 };
+
+export default SearchScreen;
