@@ -1,14 +1,11 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { CoreLayout, MainLayout } from "layouts";
+import { MainLayout } from "layouts";
 import AddressScreen from "./Address/AddressScreen";
-import { store } from "store";
 
 const AddressPage = () => {
   return <AddressScreen />;
 };
-
-const { app } = store.getState();
 
 AddressPage.Layout = MainLayout;
 

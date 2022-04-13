@@ -6,11 +6,11 @@ import Form, { Field } from "@atlaskit/form";
 import { RadioGroup } from "@atlaskit/radio";
 import { OptionsPropType } from "@atlaskit/radio/types";
 import Button from "@atlaskit/button";
+import Link from "next/link";
 
 import { setTogglePopupCancellation } from "store";
 import { useOnClickOutside } from "utils";
 import { IConClose } from ".";
-import Link from "next/link";
 import { PATH_ORDER_CANCELED } from "constant";
 
 interface FormData {
