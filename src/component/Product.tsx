@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Select from "@atlaskit/select";
+import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
 import { IProduct } from "types";
@@ -26,25 +27,23 @@ const options = [
 ];
 
 export const ComponentProduct = (props: IProps) => {
+  // route
+  const route = useRouter();
   //page props
 
   const { data, isHeart = true, saleOne, saleTwo, close, select } = props;
 
+  const handleProductClick = () => {
+    route.push("/productDetail");
+  };
+
   return (
     <>
-      <div className="w-full relative">
-        <img
-          src={data.img}
-          className="w-full object-cover aspect-square"
-          alt=""
-        />
+      <div className="w-full relative cursor-pointer" onClick={handleProductClick}>
+        <img src={data.img} className="w-full object-cover aspect-square" alt="" />
         <div className="absolute bottom-0 left-0 font-sans text-[9px] not-italic font-semibold">
-          {saleOne && (
-            <div className="text-bodyText p-1 bg-[#F7E04A] w-fit">20% sale</div>
-          )}
-          {saleTwo && (
-            <div className="text-white p-1 bg-[#E54062] w-fit">30% off</div>
-          )}
+          {saleOne && <div className="text-bodyText p-1 bg-[#F7E04A] w-fit">20% sale</div>}
+          {saleTwo && <div className="text-white p-1 bg-[#E54062] w-fit">30% off</div>}
         </div>
         {close && (
           <div className="absolute top-1 right-1 ">
@@ -59,19 +58,13 @@ export const ComponentProduct = (props: IProps) => {
       </div>
       <div className="flex justify-between w-full mt-1">
         <div className="w-2/6 pr-0.5 ">
-          <div className="w-full bg-gray_4 aspect-square flex  items-center justify-center">
-            Ic
-          </div>
+          <div className="w-full bg-gray_4 aspect-square flex  items-center justify-center">Ic</div>
         </div>
         <div className="w-2/6 px-[1px]">
-          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">
-            Ic
-          </div>
+          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">Ic</div>
         </div>
         <div className="w-2/6 pl-0.5">
-          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">
-            Ic
-          </div>
+          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">Ic</div>
         </div>
       </div>
       <div className="font-sans not-italic text-bodyText text-sm font-bold mt-1 whitespace-nowrap overflow-hidden text-ellipsis">
@@ -81,12 +74,8 @@ export const ComponentProduct = (props: IProps) => {
         {data.desc}
       </div>
       <div className="flex justify-between items-end mt-0.5">
-        <span className="font-sans font-bold text-xs not-italic text-bodyText">
-          {data.price.toFixed(3)} đ
-        </span>
-        {isHeart && (
-          <IConHeartPlusOutline className="inline-block relative top-[-2px] " />
-        )}
+        <span className="font-sans font-bold text-xs not-italic text-bodyText">{data.price.toFixed(3)} đ</span>
+        {isHeart && <IConHeartPlusOutline className="inline-block relative top-[-2px] " />}
       </div>
     </>
   );
@@ -100,18 +89,10 @@ export const ComponentProductSecond = (props: IProps) => {
   return (
     <>
       <div className="w-full relative">
-        <img
-          src={data.img}
-          className="w-full object-cover aspect-square"
-          alt=""
-        />
+        <img src={data.img} className="w-full object-cover aspect-square" alt="" />
         <div className="absolute bottom-0 left-0 font-sans text-[9px] not-italic font-semibold">
-          {saleOne && (
-            <div className="text-bodyText p-1 bg-[#F7E04A] w-fit">20% sale</div>
-          )}
-          {saleTwo && (
-            <div className="text-white p-1 bg-[#E54062] w-fit">30% off</div>
-          )}
+          {saleOne && <div className="text-bodyText p-1 bg-[#F7E04A] w-fit">20% sale</div>}
+          {saleTwo && <div className="text-white p-1 bg-[#E54062] w-fit">30% off</div>}
         </div>
         {close && (
           <div className="absolute top-1 right-1 ">
@@ -126,19 +107,13 @@ export const ComponentProductSecond = (props: IProps) => {
       </div>
       <div className="flex justify-between w-full mt-1">
         <div className="w-2/6 pr-0.5 ">
-          <div className="w-full bg-gray_4 aspect-square flex  items-center justify-center">
-            Ic
-          </div>
+          <div className="w-full bg-gray_4 aspect-square flex  items-center justify-center">Ic</div>
         </div>
         <div className="w-2/6 px-[1px]">
-          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">
-            Ic
-          </div>
+          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">Ic</div>
         </div>
         <div className="w-2/6 pl-0.5">
-          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">
-            Ic
-          </div>
+          <div className="w-full bg-gray_4 aspect-square flex items-center justify-center">Ic</div>
         </div>
       </div>
       <div className="font-sans not-italic text-gray_1 text-sm font-bold mt-1 whitespace-nowrap overflow-hidden text-ellipsis">
@@ -148,12 +123,8 @@ export const ComponentProductSecond = (props: IProps) => {
         {data.desc}
       </div>
       <div className="flex justify-between items-end mt-0.5">
-        <span className="font-sans font-bold text-xs not-italic text-primary">
-          {data.price.toFixed(3)} đ
-        </span>
-        {isHeart && (
-          <IConHeartPlusOutline className="inline-block relative top-[-2px] " />
-        )}
+        <span className="font-sans font-bold text-xs not-italic text-primary">{data.price.toFixed(3)} đ</span>
+        {isHeart && <IConHeartPlusOutline className="inline-block relative top-[-2px] " />}
       </div>
     </>
   );
@@ -165,11 +136,7 @@ export const ComponentProductCard = () => {
   return (
     <div className="w-full border rounded-lg border-solid border-gray_3 p-3 flex">
       <div className="w-1/4">
-        <img
-          className="w-full object-cover"
-          alt=""
-          src="/images/order/order2.png"
-        />
+        <img className="w-full object-cover" alt="" src="/images/order/order2.png" />
       </div>
       <div className="ml-3">
         <div className="f-bold">Áo thun</div>
@@ -199,9 +166,7 @@ export const ComponentProductCard = () => {
               />
             </span>
           </div>
-          <div className="f-normal text-[#EE4848] cursor-pointer">
-            {t("clear")}
-          </div>
+          <div className="f-normal text-[#EE4848] cursor-pointer">{t("clear")}</div>
         </div>
       </div>
     </div>
