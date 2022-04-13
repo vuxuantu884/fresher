@@ -34,7 +34,7 @@ export const ComponentProduct = (props: IProps) => {
   const { data, isHeart = true, saleOne, saleTwo, close, select } = props;
 
   const handleProductClick = () => {
-    route.push("/productdetail");
+    route.push("/productDetail");
   };
 
   return (

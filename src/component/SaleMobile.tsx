@@ -64,7 +64,7 @@ const ProductSale = (props: IProps) => {
         <div className="text-white flex flex-col items-start">
           <span className="text-[13px] font-normal uppercase mb-[3px]">sub title</span>
           <span className="text-[11px] font-normal text-gray_1">Lorem Ipsum</span>
-          <div className="bg-[#F7E04A] text-[#333] text-[9px] h-[15px] px-[2px]">20% sale</div>
+          <div className="bg-[#F7E04A] text-bodyText text-[9px] h-[15px] px-[2px]">20% sale</div>
         </div>
       </div>
     </div>
