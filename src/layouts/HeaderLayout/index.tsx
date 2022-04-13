@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 
 import { HeaderTitle } from "./Title";
 import { HeaderMenu } from "./Menu";
-import { ComponentMenuMobile } from "component";
+import { ComponentMenuMobile, ComponentSaleMobile } from "component";
 import { useOnClickOutside } from "utils";
 
 export const HeaderLayout = () => {
@@ -14,6 +14,10 @@ export const HeaderLayout = () => {
   const ref = useRef<HTMLDivElement>(null);
   //page hooks
   const { t } = useTranslation();
+  // sale state
+  const [showSale, setShowSale] = useState<boolean>(false);
+  // sale ref
+  const refSale = useRef<HTMLDivElement>(null);
 
   const handleToggleMenu = () => {
     setShowMenu(!showMenu);
@@ -21,6 +25,15 @@ export const HeaderLayout = () => {
 
   useOnClickOutside(ref, handleToggleMenu);
 
+  const handleToggleSale = () => {
+    setShowSale(!showSale);
+  };
+
+  const handleCloseSale = () => {
+    setShowSale(false);
+  };
+
+  useOnClickOutside(refSale, handleToggleSale);
   return (
     <>
       <div className="">
@@ -48,7 +61,7 @@ export const HeaderLayout = () => {
         </div>
         <HeaderTitle handleToggleMenu={handleToggleMenu} />
         <div className="flex h-16">
-          <div className="w-1/2 relative">
+          <div className="w-1/2 relative cursor-pointer" onClick={handleToggleSale}>
             <Image
               src="/images/header/avartarBrandLeft.png"
               layout="fill"
@@ -58,7 +71,7 @@ export const HeaderLayout = () => {
               alt=""
             />
           </div>
-          <div className="w-1/2 relative">
+          <div className="w-1/2 relative cursor-pointer" onClick={handleToggleSale}>
             <Image
               src="/images/header/avartarBrandRight.png"
               layout="fill"
@@ -71,8 +84,9 @@ export const HeaderLayout = () => {
         </div>
         <HeaderMenu />
       </div>
-      {showMenu && (
-        <ComponentMenuMobile ref={ref} handleToggleMenu={handleToggleMenu} />
+      {showMenu && <ComponentMenuMobile ref={ref} handleToggleMenu={handleToggleMenu} />}
+      {showSale && (
+        <ComponentSaleMobile handleCloseSale={handleCloseSale} ref={refSale} handleToggleSale={handleToggleSale} />
       )}
     </>
   );
