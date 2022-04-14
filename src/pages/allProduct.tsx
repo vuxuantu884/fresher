@@ -1,14 +1,13 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import { CoreLayout, MainLayout } from "layouts";
-import AddressScreen from "./Address/AddressScreen";
-import { store } from "store";
+import { CoreLayout } from "layouts";
+import AllProductScreen from "./AllProduct/AllProductScreen";
 
-const AddressPage = () => {
-  return <AddressScreen />;
+const AllProductPage = () => {
+  return <AllProductScreen />;
 };
 
-AddressPage.Layout = MainLayout;
+AllProductPage.Layout = CoreLayout;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -19,4 +18,4 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default AddressPage;
+export default AllProductPage;

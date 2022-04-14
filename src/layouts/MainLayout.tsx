@@ -18,10 +18,11 @@ export const MainLayout = ({ children }: Props) => {
     popupSelectTheQuestionProblem,
     deliveryRecords,
     editAddress,
+    showSale,
   } = useSelector(selectApp);
 
   const checkedPopup =
-    popupCancellation || popup || popupSelectTheQuestionProblem;
+    popupCancellation || popup || popupSelectTheQuestionProblem || showSale;
 
   return (
     <>

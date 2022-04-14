@@ -10,3 +10,6 @@ export const PATH_CHANGE_PASSWORD = "/changePassword";
 export const PATH_MESSAGE = "/message";
 export const PATH_PAYMENT = "/payment";
 export const PATH_ORDER_SUCCESS = "/orderSuccess";
+export const PATH_SALE = "/sale";
+export const PATH_PRODUCT_DETAIL = "/productDetail";
+export const PATH_ALL_PRODUCT = "/allProduct";

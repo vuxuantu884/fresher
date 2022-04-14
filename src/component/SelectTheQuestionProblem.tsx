@@ -28,7 +28,7 @@ export const ComponentSelectTheQuestionProblem = (props: IProps) => {
   useOnClickOutside(ref, handleCloseSelectTheQuestionProblem);
 
   return (
-    <div className="bg-popup flex justify-center">
+    <div className="bg-popup flex justify-center z-20">
       <div
         className="py-4 bg-white w-[90%] h-fit absolute top-[30vh] -translate-y-2/4 rounded"
         ref={ref}

@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import resolveConfig from "tailwindcss/resolveConfig";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
 
 import { IConArrowLeft } from "component";
 import tailwindConfig from "../../../tailwind.config";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const fullConfig: any = resolveConfig(tailwindConfig);
 

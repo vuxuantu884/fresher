@@ -16,5 +16,6 @@ export * from "./Province";
 export * from "./Message";
 export * from "./Cart";
 export * from "./SaleMobile";
-export * from "./Sale";
-export * from "./ProductDetail2";
+export * from "./TotalProduct";
+export * from "./Menu";
+export * from "./PopUpCoupon";

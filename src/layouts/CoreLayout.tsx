@@ -8,11 +8,11 @@ interface Props {
 }
 
 export const CoreLayout = ({ children }: Props) => {
-  const { popup, popupCancellation, popupSelectTheQuestionProblem } =
+  const { popup, popupCancellation, popupSelectTheQuestionProblem, showSale } =
     useSelector(selectApp);
 
   const checkedPopup =
-    popupCancellation || popup || popupSelectTheQuestionProblem;
+    popupCancellation || popup || popupSelectTheQuestionProblem || showSale;
 
   return (
     <div

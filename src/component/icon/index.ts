@@ -26,3 +26,6 @@ export * from "./Truck";
 export * from "./Edit";
 export * from "./Lightning";
 export * from "./Add";
+export * from "./Rectangle";
+export * from "./Card";
+export * from "./Message";

@@ -9,6 +9,7 @@ interface appState {
   deliveryRecords: boolean;
   editAddress: boolean;
   message: boolean;
+  showSale: boolean;
 }
 
 const initialState: appState = {
@@ -19,6 +20,7 @@ const initialState: appState = {
   deliveryRecords: false,
   editAddress: false,
   message: false,
+  showSale: false,
 };
 
 export const appSlice = createSlice({
@@ -50,6 +52,9 @@ export const appSlice = createSlice({
     setToggleMessage: (state) => {
       state.message = !state.message;
     },
+    setToggleShowSale: (state) => {
+      state.showSale = !state.showSale;
+    },
   },
 });
 
@@ -63,6 +68,7 @@ export const {
   setToggleDeliveryRecords,
   setToggleEditAddress,
   setToggleMessage,
+  setToggleShowSale,
 } = appSlice.actions;
 
 // cần đặt tên có đuôi Store

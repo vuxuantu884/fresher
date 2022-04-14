@@ -93,3 +93,38 @@ export const IConCloseFullBg = (props: ICon) => {
     </svg>
   );
 };
+
+export const IConCloseCoupon = (props: ICon) => {
+  const {
+    width = 29,
+    height = 29,
+    color = "black",
+    onClick,
+    className,
+  } = props;
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 29 29"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className ? className + " cursor-pointer" : "cursor-pointer"}
+    >
+      <circle cx="14.5" cy="14.5" r="14.5" fill="#F2F2F2" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M21.1479 7.85198C21.5058 8.20996 21.5058 8.79036 21.1479 9.14834L10.1479 20.1483C9.78988 20.5063 9.20947 20.5063 8.85149 20.1483C8.49351 19.7904 8.49351 19.21 8.85149 18.852L19.8515 7.85198C20.2095 7.494 20.7899 7.494 21.1479 7.85198Z"
+        fill="black"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M8.85149 7.85198C9.20947 7.494 9.78988 7.494 10.1479 7.85198L21.1479 18.852C21.5058 19.21 21.5058 19.7904 21.1479 20.1483C20.7899 20.5063 20.2095 20.5063 19.8515 20.1483L8.85149 9.14834C8.49351 8.79036 8.49351 8.20996 8.85149 7.85198Z"
+        fill={color}
+      />
+    </svg>
+  );
+};

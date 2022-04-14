@@ -1,5 +1,5 @@
 import { IColors } from "types";
-import { eumColors } from ".";
+import { eumColors } from "./enum";
 
 export const CHECK_START = 1;
 export const CHECK_END = 0;

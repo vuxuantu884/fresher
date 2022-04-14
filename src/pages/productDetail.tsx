@@ -1,20 +1,17 @@
-import { ComponentProductDetail2 } from "component";
-import { CoreLayout, FooterLayout, HeaderLayout } from "layouts";
+// import { ComponentProductDetail2 } from "component";
+import { MainLayout } from "layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import HomeFavoriteProduct from "./home/components/FavoriteProduct";
+import ProductDetailScreen from "./ProductDetail/ProductDetaiScreen";
 
 const ProductDetailPage = () => {
   return (
     <>
-      <HeaderLayout />
-      <ComponentProductDetail2 />
-      <HomeFavoriteProduct />
-      <FooterLayout />
+      <ProductDetailScreen />
     </>
   );
 };
 
-ProductDetailPage.Layout = CoreLayout;
+ProductDetailPage.Layout = MainLayout;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {

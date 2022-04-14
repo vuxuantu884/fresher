@@ -1,39 +1,37 @@
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { HeaderTitle } from "./Title";
 import { HeaderMenu } from "./Menu";
 import { ComponentMenuMobile, ComponentSaleMobile } from "component";
 import { useOnClickOutside } from "utils";
+import { resetApp, selectApp, setToggleShowSale } from "store";
 
 export const HeaderLayout = () => {
+  //page hooks
+  const dispatch = useDispatch();
   //page state
   const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  //page redux
+  const { showSale } = useSelector(selectApp);
+
   //page ref
   const ref = useRef<HTMLDivElement>(null);
-  //page hooks
-  const { t } = useTranslation();
-  // sale state
-  const [showSale, setShowSale] = useState<boolean>(false);
-  // sale ref
   const refSale = useRef<HTMLDivElement>(null);
 
   const handleToggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
-  useOnClickOutside(ref, handleToggleMenu);
-
   const handleToggleSale = () => {
-    setShowSale(!showSale);
-  };
-
-  const handleCloseSale = () => {
-    setShowSale(false);
+    dispatch(setToggleShowSale());
   };
 
   useOnClickOutside(refSale, handleToggleSale);
+  useOnClickOutside(ref, handleToggleMenu);
+
   return (
     <>
       <div className="">
@@ -61,7 +59,10 @@ export const HeaderLayout = () => {
         </div>
         <HeaderTitle handleToggleMenu={handleToggleMenu} />
         <div className="flex h-16">
-          <div className="w-1/2 relative cursor-pointer" onClick={handleToggleSale}>
+          <div
+            className="w-1/2 relative cursor-pointer"
+            onClick={handleToggleSale}
+          >
             <Image
               src="/images/header/avartarBrandLeft.png"
               layout="fill"
@@ -71,7 +72,10 @@ export const HeaderLayout = () => {
               alt=""
             />
           </div>
-          <div className="w-1/2 relative cursor-pointer" onClick={handleToggleSale}>
+          <div
+            className="w-1/2 relative cursor-pointer"
+            onClick={handleToggleSale}
+          >
             <Image
               src="/images/header/avartarBrandRight.png"
               layout="fill"
@@ -84,9 +88,14 @@ export const HeaderLayout = () => {
         </div>
         <HeaderMenu />
       </div>
-      {showMenu && <ComponentMenuMobile ref={ref} handleToggleMenu={handleToggleMenu} />}
+      {showMenu && (
+        <ComponentMenuMobile ref={ref} handleToggleMenu={handleToggleMenu} />
+      )}
       {showSale && (
-        <ComponentSaleMobile handleCloseSale={handleCloseSale} ref={refSale} handleToggleSale={handleToggleSale} />
+        <ComponentSaleMobile
+          ref={refSale}
+          handleToggleSale={handleToggleSale}
+        />
       )}
     </>
   );

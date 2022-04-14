@@ -3,7 +3,11 @@ import { useTranslation } from "next-i18next";
 import resolveConfig from "tailwindcss/resolveConfig";
 import { useState } from "react";
 
-import { ComponentProductSale, IConArrowDow } from "component";
+import {
+  ComponentMenuProduct,
+  ComponentProductSale,
+  IConArrowDow,
+} from "component";
 import tailwindConfig from "../../../tailwind.config";
 
 const fullConfig: any = resolveConfig(tailwindConfig);
@@ -11,19 +15,6 @@ const fullConfig: any = resolveConfig(tailwindConfig);
 const ResultBannerScreen = () => {
   //page hook
   const { t } = useTranslation();
-  //page variable
-  const menu: string[] = [
-    t("favourite"),
-    t("expensive"),
-    t("lowPrice"),
-    t("choose") + "%",
-  ];
-  //page state
-  const [currentMenu, setCurrentMenu] = useState<string>(menu[0]);
-
-  const handleToggleMenu = (value: string) => {
-    setCurrentMenu(value);
-  };
 
   return (
     <>
@@ -46,29 +37,7 @@ const ResultBannerScreen = () => {
         </span>
         <IConArrowDow color={fullConfig.theme.colors.primary} />
       </div>
-      <div className="flex w-full bg-white border-b border-solid border-gray_4">
-        {menu.map((data, index) => {
-          return (
-            <div
-              className={`w-1/4 text-center f-normal py-4 ${
-                currentMenu === data
-                  ? "text-primary border-b border-solid border-primary"
-                  : "text-gray_2"
-              }`}
-              key={index}
-            >
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  handleToggleMenu(data);
-                }}
-              >
-                {data}
-              </span>
-            </div>
-          );
-        })}
-      </div>
+      <ComponentMenuProduct />
       <ComponentProductSale />
     </>
   );
