@@ -196,6 +196,7 @@
   "noNewMessages": "Không có tin nhắn mới",
   "conversationHistory": "Lịch sử hội thoại",
   "update": "Cập nhật",
+  "register": "Đăng ký",
   "changePassword": "Đổi mật khẩu",
   "currentPassword": "Mật khẩu hiện tại",
   "newPassword": "Mật khẩu mới",
@@ -275,5 +276,7 @@
   "typeOfSales": "Loại hình bán hàng",
   "saleprice": "Giá bán",
   "discountRate": "Tỉ lệ chiết khấu",
-  "color": "Màu sắc"
+  "color": "Màu sắc",
+  "confimPolicy": "Tôi đồng ý với các điều khoản và điều kiện",
+  "notFoundProduct": "Không tìm thấy sản phẩm phù hợp."
 }

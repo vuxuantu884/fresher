@@ -19,3 +19,5 @@ export * from "./SaleMobile";
 export * from "./TotalProduct";
 export * from "./Menu";
 export * from "./PopUpCoupon";
+export * from "./Register";
+export * from "./Clarks";
