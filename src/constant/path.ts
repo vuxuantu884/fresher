@@ -1,5 +1,6 @@
 export const PATH_HOME = "/";
 export const PATH_LOGIN = "/login";
+export const PATH_REGISTER = "/register";
 export const PATH_PROFILE = "/profile";
 export const PATH_POINT = "/point";
 export const PATH_ORDER_DETAILS = "/orderDetail";
@@ -13,3 +14,4 @@ export const PATH_ORDER_SUCCESS = "/orderSuccess";
 export const PATH_SALE = "/sale";
 export const PATH_PRODUCT_DETAIL = "/productDetail";
 export const PATH_ALL_PRODUCT = "/allProduct";
+

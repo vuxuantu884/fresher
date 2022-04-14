@@ -144,7 +144,7 @@ export const ComponentEditAddress = (props: IProps) => {
                       <IConSquare />
                     </div>
                   </div>
-                  <button type="submit" className="btn btn-sub-full  mt-6">
+                  <button type="submit" className="btn btn-sub-full mt-6">
                     {t("update")}
                   </button>
                   <button
