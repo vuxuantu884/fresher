@@ -24,3 +24,7 @@ export const validateEmail = (value: string | undefined) => {
   }
   return undefined;
 };
+
+export const validateRadio = (value: string | undefined) => {
+  console.log(value);
+};

@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import { enumPassword, enumValidate } from "constant";
 import { HeaderLayout } from "layouts";
-import { validate, validatePassword } from "utils";
+import { validatePassword } from "utils";
 import { ShareInput } from "component";
 
 interface IPassword {
@@ -22,9 +22,9 @@ const ChangePasswordScreen = () => {
   const { t } = useTranslation();
   //page state
   const [showPassword, setShowPassword] = useState<IPassword>({
-    currentPassword: false,
-    newPassword: false,
-    enterNewPassword: false,
+    currentPassword: true,
+    newPassword: true,
+    enterNewPassword: true,
     confirmPasswordNotMatch: false,
   });
 
