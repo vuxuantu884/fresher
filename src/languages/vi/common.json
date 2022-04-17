@@ -28,7 +28,15 @@
     "companyProfileConditions": "Hồ sơ công ty - Điều kiện",
     "reikaiPC": "REIKAI PC",
     "footerDesc": "Trang web mua sắm trực tuyến về giày và thời trang",
-    "copyRight": "Copyright @ REIKAFASHION.Inc. All Rights Reserved"
+    "copyRight": "Copyright @ REIKAFASHION.Inc. All Rights Reserved",
+    "aboutReikaFashion": "Về Reika Fashion",
+    "community": "Cộng đồng",
+    "whatReikaFashion": "Reika Fashion là gì?",
+    "profileCompany": "Hồ sơ công ty",
+    "recruit": "Tuyển dụng",
+    "termsofService": "Điều khoản dịch vụ",
+    "privacyPolicy": "Chính sách bảo mật",
+    "aboutProduct": "Về sản phẩm"
   },
   "info": {
     "myPersonalPage": "Trang cá nhân của tôi",
@@ -77,6 +85,12 @@
     "pointsUsed": "Số điểm dùng",
     "codeOrders": "Mã đơn hàng"
   },
+  "social": {
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "youtube": "Youtube",
+    "instagram": "Instagram"
+  },
   "login": "Đăng nhập",
   "logout": "Đăng xuất",
   "password": "Mật khẩu",
@@ -123,6 +137,7 @@
   "dueDate": "Hạn dùng",
   "registrationInformation": "Thông tin đăng ký",
   "personalInformation": "Thông tin cá nhân",
+  "billingInformation": "Thông tin thanh toán",
   "accountInformation": "Thông tin tài khoản",
   "address": "Địa chỉ",
   "recentOrders": "Đơn hàng gần đây",
@@ -196,7 +211,6 @@
   "noNewMessages": "Không có tin nhắn mới",
   "conversationHistory": "Lịch sử hội thoại",
   "update": "Cập nhật",
-  "register": "Đăng ký",
   "changePassword": "Đổi mật khẩu",
   "currentPassword": "Mật khẩu hiện tại",
   "newPassword": "Mật khẩu mới",
@@ -277,6 +291,11 @@
   "saleprice": "Giá bán",
   "discountRate": "Tỉ lệ chiết khấu",
   "color": "Màu sắc",
-  "confimPolicy": " ",
-  "notFoundProduct": "Không tìm thấy sản phẩm phù hợp."
+  "confirmPolicy": "Tôi đồng ý với các điều khoản và điều kiện",
+  "register": "Đăng ký",
+  "confimPolicy": "Tôi đồng ý với các điều khoản và điều kiện",
+  "notFoundProduct": "Không tìm thấy sản phẩm phù hợp.",
+  "order": "Đơn hàng",
+  "lie": "Đổi/trả",
+  "7DaysReturn": "Đổi trả 7 ngày"
 }

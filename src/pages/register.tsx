@@ -1,19 +1,20 @@
 // import { ComponentSale } from "component";
-import { ComponentRegister } from "component";
-import { CoreLayout } from "layouts";
-import { HeaderTitle } from "layouts/HeaderLayout/Title";
+import { ComponentRegisterWeb } from "component";
+import { CoreLayout, MainLayout } from "layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useWindowDimensions } from "utils";
 
 const RegisterPage = () => {
+  const { width } = useWindowDimensions();
   return (
     <>
-      <HeaderTitle />
-      <ComponentRegister />
+      <ComponentRegisterWeb />
     </>
   );
 };
 
-RegisterPage.Layout = CoreLayout;
+// mobile
+RegisterPage.Layout = MainLayout;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {

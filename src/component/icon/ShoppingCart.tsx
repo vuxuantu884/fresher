@@ -1,7 +1,13 @@
 import { ICon } from "types";
 
 export const IConShoppingCart = (props: ICon) => {
-  const { width = 24, height = 24, color = "black", onClick } = props;
+  const {
+    width = 24,
+    height = 24,
+    color = "black",
+    onClick,
+    className,
+  } = props;
   return (
     <svg
       width={width}
@@ -10,8 +16,7 @@ export const IConShoppingCart = (props: ICon) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
-      className="cursor-pointer"
-
+      className={className ? className + " cursor-pointer" : "cursor-pointer"}
     >
       <path
         d="M8.88672 21.3333C9.71515 21.3333 10.3867 20.6618 10.3867 19.8333C10.3867 19.0049 9.71515 18.3333 8.88672 18.3333C8.05829 18.3333 7.38672 19.0049 7.38672 19.8333C7.38672 20.6618 8.05829 21.3333 8.88672 21.3333Z"
