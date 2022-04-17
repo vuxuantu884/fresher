@@ -21,3 +21,4 @@ export * from "./Menu";
 export * from "./PopUpCoupon";
 export * from "./Register";
 export * from "./Clarks";
+export * from "./RegisterWeb";

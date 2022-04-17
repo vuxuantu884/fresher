@@ -28,7 +28,15 @@
     "companyProfileConditions": "Hồ sơ công ty - Điều kiện",
     "reikaiPC": "REIKAI PC",
     "footerDesc": "Trang web mua sắm trực tuyến về giày và thời trang",
-    "copyRight": "Copyright @ REIKAFASHION.Inc. All Rights Reserved"
+    "copyRight": "Copyright @ REIKAFASHION.Inc. All Rights Reserved",
+    "aboutReikaFashion": "Về Reika Fashion",
+    "community": "Cộng đồng",
+    "whatReikaFashion": "Reika Fashion là gì?",
+    "profileCompany": "Hồ sơ công ty",
+    "recruit": "Tuyển dụng",
+    "termsofService": "Điều khoản dịch vụ",
+    "privacyPolicy": "Chính sách bảo mật",
+    "aboutProduct": "Về sản phẩm"
   },
   "info": {
     "myPersonalPage": "Trang cá nhân của tôi",
@@ -76,6 +84,12 @@
     "numberOfPointsReceived": "Số điểm nhận",
     "pointsUsed": "Số điểm dùng",
     "codeOrders": "Mã đơn hàng"
+  },
+  "social": {
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "youtube": "Youtube",
+    "instagram": "Instagram"
   },
   "login": "Đăng nhập",
   "logout": "Đăng xuất",
@@ -278,5 +292,8 @@
   "discountRate": "Tỉ lệ chiết khấu",
   "color": "Màu sắc",
   "confimPolicy": "Tôi đồng ý với các điều khoản và điều kiện",
-  "notFoundProduct": "Không tìm thấy sản phẩm phù hợp."
+  "notFoundProduct": "Không tìm thấy sản phẩm phù hợp.",
+  "order": "Đơn hàng",
+  "lie": "Đổi/trả",
+  "7DaysReturn": "Đổi trả 7 ngày"
 }
