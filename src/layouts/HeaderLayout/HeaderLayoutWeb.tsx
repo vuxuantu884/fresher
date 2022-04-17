@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { HeaderTitleWeb } from "./TitleWeb";
+import { HeaderTitle } from ".";
 
 export const HeaderLayoutWeb = () => {
   return (
@@ -21,7 +21,7 @@ export const HeaderLayoutWeb = () => {
             />
           </div>
         </div>
-        <HeaderTitleWeb />
+        <HeaderTitle />
         <div className="flex w-full">
           <div className="w-1/2">
             <img

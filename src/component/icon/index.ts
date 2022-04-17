@@ -29,3 +29,4 @@ export * from "./Add";
 export * from "./Rectangle";
 export * from "./Card";
 export * from "./Message";
+export * from "./Package";

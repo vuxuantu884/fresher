@@ -1,6 +1,5 @@
 import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 
 import {
   ComponentEditAddress,
@@ -8,7 +7,6 @@ import {
   ComponentDeliveryRecords,
 } from "component";
 import {
-  resetApp,
   selectApp,
   setToggleDeliveryRecords,
   setToggleEditAddress,
@@ -20,13 +18,6 @@ const AddressScreen = () => {
   const dispatch = useDispatch();
   //redux state
   const { deliveryRecords, editAddress } = useSelector(selectApp);
-
-  useEffect(() => {
-    return () => {
-      dispatch(resetApp());
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const handleToggleDeliveryRecords = () => {
     dispatch(setToggleDeliveryRecords());

@@ -2,10 +2,12 @@ import { Input } from "antd";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 import { useLogin } from "handlers/auth/auth.hooks";
 import { CoreLayout, FooterLayout } from "layouts";
 import styles from "./styles/login.module.scss";
+import { PATH_REGISTER } from "constant";
 
 const LoginPage = () => {
   //page hooks
@@ -21,9 +23,11 @@ const LoginPage = () => {
           <div className="w-3/4 text-center mx-auto mb-4">
             {t("loginPage.registering")}
           </div>
-          <button className="btn btn-primary-full">
-            {t("loginPage.signUp")}
-          </button>
+          <Link href={PATH_REGISTER} passHref>
+            <button className="btn btn-primary-full">
+              {t("loginPage.signUp")}
+            </button>
+          </Link>
         </div>
         <div className="p-4"> {t("loginPage.alreadyAccount")}</div>
         <div className="p-4 bg-white">

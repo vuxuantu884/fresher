@@ -51,7 +51,13 @@ const bannerCategory: IBannerProduct[] = [
   },
 ];
 
-const BannerCategory = () => {
+interface IProps {
+  handleSwitch: () => void;
+}
+
+const BannerCategory = (props: IProps) => {
+  //page props
+  const { handleSwitch } = props;
   //page hook
   const { t } = useTranslation();
 
@@ -72,8 +78,9 @@ const BannerCategory = () => {
                   : check === CHECK_END
                   ? "pl-1"
                   : "px-0.5"
-              } flex flex-wrap relative`}
+              } flex flex-wrap relative cursor-pointer`}
               key={index}
+              onClick={handleSwitch}
             >
               <img
                 className="w-full aspect-[2/1] object-cover"

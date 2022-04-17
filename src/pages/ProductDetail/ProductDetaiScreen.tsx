@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import {
   ComponentPopUpCoupon,
+  ComponentPopUpCouponAdd,
+  ComponentPopUpCouponFavorite,
   ComponentProduct,
   IConCardPlus,
   IConFacebook,
@@ -21,9 +23,14 @@ import {
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { CHECK_END, CHECK_START, PATH_ALL_PRODUCT } from "constant";
+import { CHECK_END, CHECK_START, PATH_ALL_PRODUCT, PATH_CARD } from "constant";
 import { IProduct } from "types";
-import { selectApp, setToggleSelectTheQuestionProblem } from "store";
+import {
+  selectApp,
+  setToggleAddCoupon,
+  setToggleMessage,
+  setToggleSelectTheQuestionProblem,
+} from "store";
 
 const images: Array<string> = [
   "/images/product/productDetail.png",
@@ -97,10 +104,19 @@ const ProductDetailScreen = () => {
   //page state
   const [currentImage, setCurrentImage] = useState<number>(1);
   //redux state
-  const { popupSelectTheQuestionProblem } = useSelector(selectApp);
+  const { popupSelectTheQuestionProblem, message, popupAddCoupon } =
+    useSelector(selectApp);
 
   const handleCloseSelectTheQuestionProblem = () => {
     dispatch(setToggleSelectTheQuestionProblem());
+  };
+
+  const handleToggleMessage = () => {
+    dispatch(setToggleMessage());
+  };
+
+  const handleAddCoupon = () => {
+    dispatch(setToggleAddCoupon());
   };
 
   const handleChangSwiper = (swiper: any) => {
@@ -111,6 +127,8 @@ const ProductDetailScreen = () => {
   return (
     <>
       {popupSelectTheQuestionProblem && <ComponentPopUpCoupon />}
+      {message && <ComponentPopUpCouponFavorite />}
+      {popupAddCoupon && <ComponentPopUpCouponAdd />}
       <div className="bg-[#47817E] f-normal text-xs text-white p-4">
         <div className="mb-2">
           Sản phẩm này được giảm <b>10% nhờ Coupon</b>{" "}
@@ -141,14 +159,10 @@ const ProductDetailScreen = () => {
           <div className="py-0.5 p-3 rounded-full bg-[#4F4F4F] f-bold text-[10px] text-white">
             {currentImage} / {images.length}
           </div>
-          <div className="w-10 h-10 bg-white rounded-full center">
-            <IConHeartOutline />
+          <div className="w-10 h-10 bg-white rounded-full center flex-col">
+            <IConHeartOutline onClick={handleCloseSelectTheQuestionProblem} />
+            <div className="text-[8px] font-bold text-bodyText">120</div>
           </div>
-        </div>
-
-        <div className="absolute right-7 bottom-[92px] w-10 h-10 bg-white rounded-full flex flex-col items-center justify-center">
-          <IConHeart />
-          <span className="text-[8px] font-bold">120</span>
         </div>
       </div>
       <div className="bg-white px-4 pb-4">
@@ -200,7 +214,7 @@ const ProductDetailScreen = () => {
               <span>Giảm giá sẽ hết sau 13 giờ 20 phút 02 giây</span>
             </div>
           </div>
-          <IConMessage onClick={handleCloseSelectTheQuestionProblem} />
+          <IConMessage onClick={handleToggleMessage} />
         </div>
         {/*  */}
         <button className="btn btn-sub-primary f-normal text-bodyText mb-4">
@@ -218,7 +232,10 @@ const ProductDetailScreen = () => {
           et non lacus, integer sit vestibulum. Egestas tortor, vel pellentesque
           venenatis aliquam. Enim lorem.
         </div>
-        <button className="btn btn-primary-full py-3 f-bold text-white mb-4">
+        <button
+          className="btn btn-primary-full py-3 f-bold text-white mb-4"
+          onClick={handleAddCoupon}
+        >
           <IConCardPlus className="mr-3" /> Thêm vào giỏ hàng
         </button>
         <div className="w-full h-[42px] flex mb-3 border-b border-gray_4 border-solid">

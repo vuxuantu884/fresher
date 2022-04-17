@@ -12,7 +12,7 @@ import { useTranslation } from "next-i18next";
 
 import styles from "../styles/footer.module.scss";
 
-export const FooterLayout = () => {
+export const FooterLayoutMobile = () => {
   //page hooks
   const { t } = useTranslation();
 

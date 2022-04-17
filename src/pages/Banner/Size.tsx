@@ -37,7 +37,13 @@ const bannerSize: IBannerSize[] = [
   },
 ];
 
-const BannerSize = () => {
+interface IProps {
+  handleSwitch: () => void;
+}
+
+const BannerSize = (props: IProps) => {
+  //page props
+  const { handleSwitch } = props;
   //page hook
   const { t } = useTranslation();
 
@@ -60,7 +66,8 @@ const BannerSize = () => {
                   : check === CHECK_END
                   ? "pl-1"
                   : "px-0.5"
-              } flex flex-wrap`}
+              } flex flex-wrap cursor-pointer`}
+              onClick={handleSwitch}
             >
               <button
                 className={`btn w-full aspect-[2/1] f-normal text-base bg-gray_4 rounded  ${

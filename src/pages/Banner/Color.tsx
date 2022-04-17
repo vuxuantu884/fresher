@@ -1,8 +1,20 @@
 import { useTranslation } from "next-i18next";
 
-import { CHECK_END, CHECK_START, COLORS, eumColors } from "constant";
+import {
+  CHECK_END,
+  CHECK_START,
+  COLORS,
+  eumColors,
+  PATH_RESULT_BANNER,
+} from "constant";
+import Link from "next/link";
+interface IProps {
+  handleSwitch: () => void;
+}
 
-const BannerColor = () => {
+const BannerColor = (props: IProps) => {
+  //page props
+  const { handleSwitch } = props;
   //page hook
   const { t } = useTranslation();
 
@@ -16,14 +28,13 @@ const BannerColor = () => {
           //check phan tu dau va phan tu cuoi
           const check = (index + 1) % 3;
 
-          const bgColor = (
+          const bgColor =
             "btn center btn-color" +
             " " +
             color.bgColor +
             (color.name === eumColors.WHITE
               ? " border border-solid border-gray_3"
-              : " ")
-          ).trim();
+              : " ");
 
           return (
             <div
@@ -37,10 +48,7 @@ const BannerColor = () => {
               }`}
             >
               <div className=" flex items-center p-1.5 w-full border border-solid border-gray_3 rounded">
-                <button
-                  // className={`btn btn-color bg-red ${color.bgColor}`}
-                  className={bgColor}
-                >
+                <button className={bgColor} onClick={handleSwitch}>
                   {color.name === eumColors.ALL && (
                     <div className="bg-white w-[50%] h-[2px] rounded-full"></div>
                   )}
@@ -56,7 +64,11 @@ const BannerColor = () => {
       <div className="w-full py-4 text-center f-normal text-base">
         {t("banner.searchResults")}
       </div>
-      <button className="btn btn-sub-full">{t("banner.searchProduct")}</button>
+      <Link href={PATH_RESULT_BANNER} passHref>
+        <button className="btn btn-sub-full">
+          {t("banner.searchProduct")}
+        </button>
+      </Link>
     </div>
   );
 };

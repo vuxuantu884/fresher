@@ -30,7 +30,7 @@ a {
     @apply text-bodyText rounded-[32px] text-base border-none font-bold w-[120px] h-[25px] bg-white;
   }
   .btn-primary-full {
-    @apply bg-primary py-[17px] rounded not-italic text-sm font-normal text-white w-full;
+    @apply bg-primary py-3 rounded not-italic text-sm font-normal text-white w-full;
   }
 
   .btn-second {

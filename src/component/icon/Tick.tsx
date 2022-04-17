@@ -2,7 +2,13 @@ import { ICon } from "types";
 
 export const IConTick = (props: ICon) => {
   //page props
-  const { width = 16, height = 16, color = "#47817E", onClick, className } = props;
+  const {
+    width = 16,
+    height = 16,
+    color = "#47817E",
+    onClick,
+    className,
+  } = props;
   return (
     <svg
       width={width}
@@ -23,7 +29,13 @@ export const IConTick = (props: ICon) => {
 
 export const IConTickFull = (props: ICon) => {
   //page props
-  const { width = 16, height = 16, color = "#B61E42", onClick, className } = props;
+  const {
+    width = 16,
+    height = 16,
+    color = "#B61E42",
+    onClick,
+    className,
+  } = props;
   return (
     <svg
       width={width}

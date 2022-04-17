@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 
 import { setToggleShowSale } from "store";
-import { PATH_SALE } from "constant";
+import { PATH_COUPON } from "constant";
 import { IConCloseCoupon } from ".";
 
 interface IProps {
@@ -59,7 +59,7 @@ const ProductSale = (props: IPropsProductSale) => {
   const dispatch = useDispatch();
 
   const handleProductClick = () => {
-    route.push(PATH_SALE);
+    route.push(PATH_COUPON);
     dispatch(setToggleShowSale());
   };
 

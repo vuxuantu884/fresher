@@ -10,6 +10,8 @@ interface appState {
   editAddress: boolean;
   message: boolean;
   showSale: boolean;
+  popupAddCoupon: boolean;
+  popupClose: boolean;
 }
 
 const initialState: appState = {
@@ -21,6 +23,8 @@ const initialState: appState = {
   editAddress: false,
   message: false,
   showSale: false,
+  popupAddCoupon: false,
+  popupClose: false,
 };
 
 export const appSlice = createSlice({
@@ -55,6 +59,12 @@ export const appSlice = createSlice({
     setToggleShowSale: (state) => {
       state.showSale = !state.showSale;
     },
+    setToggleAddCoupon: (state) => {
+      state.popupAddCoupon = !state.popupAddCoupon;
+    },
+    setToggleClose: (state) => {
+      state.popupClose = !state.popupClose;
+    },
   },
 });
 
@@ -69,6 +79,8 @@ export const {
   setToggleEditAddress,
   setToggleMessage,
   setToggleShowSale,
+  setToggleAddCoupon,
+  setToggleClose,
 } = appSlice.actions;
 
 // cần đặt tên có đuôi Store

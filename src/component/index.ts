@@ -20,5 +20,6 @@ export * from "./TotalProduct";
 export * from "./Menu";
 export * from "./PopUpCoupon";
 export * from "./Register";
-export * from "./Clarks";
-export * from "./RegisterWeb";
+export * from "./DeleteFavorite";
+export * from "./ResetApp";
+export * from "./Switch";

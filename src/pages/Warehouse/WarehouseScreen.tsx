@@ -1,8 +1,15 @@
 import { useTranslation } from "next-i18next";
+import { useDispatch, useSelector } from "react-redux";
 
-import { ComponentInformation, ComponentProduct, IConTick } from "component";
+import {
+  ComponentInformation,
+  ComponentPoUpDeleteFavorite,
+  ComponentProduct,
+  IConTick,
+} from "component";
 import { CHECK_END, CHECK_START } from "constant";
 import { IProduct } from "types";
+import { selectApp, setToggleClose } from "store";
 
 const products: IProduct[] = [
   {
@@ -62,9 +69,19 @@ const products: IProduct[] = [
 const WarehouseScreen = () => {
   //page hooks
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+  //redux state
+  const { popupClose } = useSelector(selectApp);
+
+  const handleToggleClose = () => {
+    dispatch(setToggleClose());
+  };
 
   return (
     <>
+      {popupClose && (
+        <ComponentPoUpDeleteFavorite handleToggleClose={handleToggleClose} />
+      )}
       <div className="mt-4 bg-white">
         <div className="border-b border-gray_5 border-solid">
           <div className="px-7 py-4 font-normal font-sans text-sm text-bodyText border-b-2 border-[#C4C4C4] border-solid w-fit">
@@ -99,7 +116,11 @@ const WarehouseScreen = () => {
                   }`}
                   key={index}
                 >
-                  <ComponentProduct data={data} close />
+                  <ComponentProduct
+                    data={data}
+                    close
+                    handleClose={handleToggleClose}
+                  />
                   <div className="mt-2">
                     {data.status ? (
                       <button className="btn btn-primary-full py-2 text-[11px]">

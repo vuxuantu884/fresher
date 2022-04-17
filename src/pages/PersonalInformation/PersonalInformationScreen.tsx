@@ -34,7 +34,6 @@ const PersonalInformationScreen = () => {
 
   const handleSubmit = (formState: { command: string }) => {
     //
-    console.log(formState);
   };
 
   return (

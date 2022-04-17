@@ -59,7 +59,13 @@ const bannerProducts: IBannerProduct[] = [
   },
 ];
 
-const BannerProduct = () => {
+interface IProps {
+  handleSwitch: () => void;
+}
+
+const BannerProduct = (props: IProps) => {
+  //page props
+  const { handleSwitch } = props;
   //page hook
   const { t } = useTranslation();
 
@@ -80,8 +86,9 @@ const BannerProduct = () => {
                   : check === CHECK_END
                   ? "pl-1"
                   : "px-0.5"
-              } flex flex-wrap relative`}
+              } flex flex-wrap relative cursor-pointer`}
               key={index}
+              onClick={handleSwitch}
             >
               {data.images &&
                 data.images.map((item, index) => {

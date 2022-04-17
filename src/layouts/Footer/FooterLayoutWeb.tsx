@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 /* eslint-disable @next/next/no-img-element */
 import {
   IConFacebook,
@@ -5,20 +6,16 @@ import {
   IConTwitter,
   IConYoutube,
 } from "component";
-import { useTranslation } from "next-i18next";
-
 export const FooterLayoutWeb = () => {
   //page hooks
   const { t } = useTranslation();
 
   return (
     <div className="px-[15vw] pt-6 bg-gray_4 font-sans">
-      <div className="flex border-b-[1px] border-gray_3">
+      <div className="flex border-b border-solid border-gray_3">
         <div className="flex w-[77%]">
           <div className="flex-1">
-            <h4 className="font-sans font-bold text-xl text-bodyText">
-              {t("footer.aboutReikaFashion")}
-            </h4>
+            <h4 className="f-bold text-xl">{t("footer.aboutReikaFashion")}</h4>
             <ul className="mt-7 text-base text-bodyText">
               <li className="mb-3">{t("footer.aboutReikaFashion")}</li>
               <li className="mb-3">{t("footer.profileCompany")}</li>
@@ -28,9 +25,7 @@ export const FooterLayoutWeb = () => {
             </ul>
           </div>
           <div className="flex-1">
-            <h4 className="font-sans font-bold text-xl text-bodyText">
-              {t("footer.userManual")}
-            </h4>
+            <h4 className="f-bold text-xl">{t("footer.userManual")}</h4>
             <ul className="mt-7 text-base text-bodyText">
               <li className="mb-3">{t("order")}</li>
               <li className="mb-3">{t("payment")}</li>
@@ -43,7 +38,7 @@ export const FooterLayoutWeb = () => {
             </ul>
           </div>
           <div className="flex-1">
-            <h4 className="font-sans font-bold text-xl text-bodyText">
+            <h4 className="font-sans f-bold text-xl ">
               {t("footer.community")}
             </h4>
             <ul className="mt-7">
@@ -86,7 +81,7 @@ export const FooterLayoutWeb = () => {
           <li className="text-base text-bodyText -mb-[2px]">
             {t("footer.footerDesc")}
           </li>
-          <li className="text-[13px] text-bodyText">{t("footer.copyRight")}</li>
+          <li className="text-xs text-bodyText">{t("footer.copyRight")}</li>
         </ul>
       </div>
     </div>

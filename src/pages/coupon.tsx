@@ -1,13 +1,17 @@
 // import { ComponentSale } from "component";
-import { ComponentMenuProduct, ComponentTotalProduct, IConArrowDow } from "component";
-import { MainLayout } from "layouts";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+import {
+  ComponentMenuProduct,
+  ComponentTotalProduct,
+  IConArrowDow,
+} from "component";
+import { MainLayout } from "layouts";
 import HomeFavoriteProduct from "./home/components/FavoriteProduct";
 
-const SalePage = () => {
+const CouponPage = () => {
   return (
     <>
-      {/* <ComponentSale /> */}
       <ComponentTotalProduct />
       <ComponentMenuProduct />
       <HomeFavoriteProduct title={false} />
@@ -18,7 +22,12 @@ const SalePage = () => {
           </div>
           <button className="btn py-1.5 px-3 bg-primary h-fit flex shadow-[0_2px_8px_1px_rgba(0,0,0,0.25)] rounded f-normal text-white">
             <span>Yêu thích</span>
-            <IConArrowDow className="ml-3" width={16} height={16} color="white" />
+            <IConArrowDow
+              className="ml-3"
+              width={16}
+              height={16}
+              color="white"
+            />
           </button>
         </div>
         <span className="f-normal text-gray_1">1-120 sản phẩm</span>
@@ -27,7 +36,7 @@ const SalePage = () => {
   );
 };
 
-SalePage.Layout = MainLayout;
+CouponPage.Layout = MainLayout;
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -38,4 +47,4 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default SalePage;
+export default CouponPage;

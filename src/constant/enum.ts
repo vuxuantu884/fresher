@@ -68,3 +68,10 @@ export enum enumAddressType {
   DISTRICTS = "Quận/Huyện",
   WARDS = "Phường/Xã",
 }
+
+export enum enumBanner {
+  PRODUCT = "product",
+  CATEGORY = "category",
+  SIZE = "size",
+  COLOR = "COlOR",
+}

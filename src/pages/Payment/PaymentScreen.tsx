@@ -171,13 +171,6 @@ const PaymentScreen = () => {
             )}
           </Form>
         </div>
-        <div className="mt-4 center">
-          <Link href={PATH_ORDER_SUCCESS} passHref>
-            <button className="py-3 px-9 rounded bg-[#FB4973] text-white f-bold">
-              {t("confirm")}
-            </button>
-          </Link>
-        </div>
       </div>
       {/* Chọn phương thức thanh toán */}
       <div className="mt-4 p-4 bg-white">
@@ -220,6 +213,13 @@ const PaymentScreen = () => {
         <div className="py-4">
           <ComponentProductCard />
         </div>
+      </div>
+      <div className="center bg-white p-4 pt-0">
+        <Link href={PATH_ORDER_SUCCESS} passHref>
+          <button className="btn btn-primary-full py-3  text-white f-bold bg-[#018D39]">
+            {t("orderConfirmation")}
+          </button>
+        </Link>
       </div>
     </>
   );

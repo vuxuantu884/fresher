@@ -6,10 +6,10 @@ import { OptionsPropType } from "@atlaskit/radio/dist/types/types";
 import { enumValidate } from "constant";
 import { useTranslation } from "next-i18next";
 import { Fragment, useState } from "react";
+
 import styles from "styles/customAtlaskit.module.scss";
 import { validate, validateEmail, validatePassword } from "utils";
-import { IConTick, IConTickNotFull } from "./icon";
-import { ShareInput } from "./share";
+import { IConTick, IConTickNotFull, ShareInput } from ".";
 
 // interface IPassword {
 //   password: boolean;
@@ -21,7 +21,7 @@ export const ComponentRegister = () => {
 
   //page state
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [confimPolicy, setConfimPolicy] = useState<boolean>(false);
+  const [confirmPolicy, setConfirmPolicy] = useState<boolean>(false);
 
   //page variable
   const options: OptionsPropType = [
@@ -41,14 +41,13 @@ export const ComponentRegister = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleConfimPolicyClick = () => {
-    setConfimPolicy(!confimPolicy);
+  const handleConfirmPolicyClick = () => {
+    setConfirmPolicy(!confirmPolicy);
   };
 
   const handleSubmit = (formState: { command: string }) => {
-    if (confimPolicy) {
-      console.log(formState);
-    }
+    //
+    console.log(formState);
   };
   return (
     <div className="font-sans">
@@ -56,7 +55,11 @@ export const ComponentRegister = () => {
       <div className="p-4 bg-white">
         <Form onSubmit={handleSubmit}>
           {({ formProps, setFieldValue }) => (
-            <form {...formProps} name="validation-example" className={styles.customAtlaskit}>
+            <form
+              {...formProps}
+              name="validation-example"
+              className={styles.customAtlaskit}
+            >
               <div className="flex gap-x-4">
                 {/* subname */}
                 <ShareInput
@@ -107,7 +110,9 @@ export const ComponentRegister = () => {
                 setFieldValue={setFieldValue}
                 placeholder={t("enterPassword")}
               />
-              <div className="f-normal text-gray_2 text-xs mt-3">{t("passwordDes")}</div>
+              <div className="f-normal text-gray_2 text-xs mt-3">
+                {t("passwordDes")}
+              </div>
               {/* radio */}
               <Field name="radio-group" defaultValue="male" label={t("sex")}>
                 {({ fieldProps }) => (
@@ -116,7 +121,12 @@ export const ComponentRegister = () => {
                   </Fragment>
                 )}
               </Field>
-              <Field name="datetime-picker" label={t("dateOfBirth")} validate={validate} defaultValue="">
+              <Field
+                name="datetime-picker"
+                label={t("dateOfBirth")}
+                validate={validate}
+                defaultValue=""
+              >
                 {({ fieldProps, error }) => (
                   <>
                     <DatePicker {...fieldProps} />
@@ -130,11 +140,18 @@ export const ComponentRegister = () => {
                   </>
                 )}
               </Field>
-              <div className="mt-8 mb-4 flex items-center justify-center" onClick={handleConfimPolicyClick}>
-                {confimPolicy ? <IConTick /> : <IConTickNotFull />}
-                <span className="ml-2">{t("confimPolicy")}</span>
+              <div
+                className="mt-8 mb-4 flex items-center justify-center"
+                onClick={handleConfirmPolicyClick}
+              >
+                {confirmPolicy ? <IConTick /> : <IConTickNotFull />}
+                <span className="ml-2">{t("confirmPolicy")}</span>
               </div>
-              <button type="submit" className="btn btn-sub-full">
+              <button
+                disabled={!confirmPolicy}
+                type="submit"
+                className="btn btn-sub-full"
+              >
                 {t("register")}
               </button>
             </form>
@@ -153,7 +170,10 @@ interface IPropsElemAfterInput {
 const ElemAfterInput = (props: IPropsElemAfterInput) => {
   const { onClick, type } = props;
   return (
-    <div className="cursor-pointer mr-3 text-base text-[#AAB0C7] relative -top-[3px]" onClick={onClick}>
+    <div
+      className="cursor-pointer mr-3 text-base text-[#AAB0C7] relative -top-[3px]"
+      onClick={onClick}
+    >
       {type ? <EyeInvisibleOutlined /> : <EyeOutlined />}
     </div>
   );

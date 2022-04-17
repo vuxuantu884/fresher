@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
+
+import { PATH_BANNER } from "constant";
 
 export default function HomeBrand() {
   //page hooks
@@ -21,19 +24,21 @@ export default function HomeBrand() {
           height="147%"
           alt=""
         />
-        <div className="absolute inset-0 bg-black/50 flex justify-center items-center flex-col">
-          <div className="text-white font-sans font-bold text-xl mb-3.5">
-            400 Lorem Ipsum Lorem Ipsum
+        <Link href={PATH_BANNER} passHref>
+          <div className="absolute inset-0 bg-black/50 flex justify-center items-center flex-col cursor-pointer">
+            <div className="text-white font-sans font-bold text-xl mb-3.5">
+              400 Lorem Ipsum Lorem Ipsum
+            </div>
+            <div className="justify-center flex mb-[22px] gap-4">
+              <button className="btn btn-primary">{t("home.women")}</button>
+              <button className="btn btn-primary">{t("home.man")}</button>
+            </div>
+            <div className="justify-center flex gap-4">
+              <button className="btn btn-primary">{t("home.kids")}</button>
+              <button className="btn btn-primary">{t("home.sport")}</button>
+            </div>
           </div>
-          <div className="justify-center flex mb-[22px] gap-4">
-            <button className="btn btn-primary">{t("home.women")}</button>
-            <button className="btn btn-primary">{t("home.man")}</button>
-          </div>
-          <div className="justify-center flex gap-4">
-            <button className="btn btn-primary">{t("home.kids")}</button>
-            <button className="btn btn-primary">{t("home.sport")}</button>
-          </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

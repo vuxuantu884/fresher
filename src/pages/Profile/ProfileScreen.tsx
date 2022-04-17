@@ -4,8 +4,8 @@ import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 
-import { ComponentRank, IConFileText } from "component";
-import { PATH_POINT } from "constant";
+import { ComponentRank, IConArrowRight, IConFileText } from "component";
+import { PATH_ADDRESS, PATH_PERSONAL_INFORMATION, PATH_POINT } from "constant";
 import { selectApp, setTogglePopup } from "store";
 
 const ProfileScreen = () => {
@@ -88,13 +88,36 @@ const ProfileScreen = () => {
           </div>
         </div>
       </div>
-      {/* thong tin dang ky */}
-      <div className="p-4 bg-white my-4 ">
+      {/* Thông tin đăng ký */}
+      <div className="p-4 pb-0 bg-white my-4 ">
         {" "}
-        <div className="w-full flex justify-center mb-4">
+        <div className="w-full flex justify-center mb-2">
           <button className="btn btn-sub">
             {t("registrationInformation")}
           </button>
+        </div>
+        <Link href={PATH_PERSONAL_INFORMATION} passHref>
+          <div className="py-3 bg-white flex justify-between f-bold cursor-pointer">
+            <div>{t("personalInformation")}</div>
+            <IConArrowRight />
+          </div>
+        </Link>
+        <div className="py-3 bg-white flex justify-between f-bold cursor-pointer">
+          <div>{t("billingInformation")}</div>
+          <IConArrowRight />
+        </div>
+        <Link href={PATH_ADDRESS} passHref>
+          <div className="py-3 bg-white flex justify-between f-bold cursor-pointer">
+            <div>{t("address")}</div>
+            <IConArrowRight />
+          </div>
+        </Link>
+      </div>
+      {/* Đơn hàng gần đây */}
+      <div className="p-4 bg-white my-4 ">
+        {" "}
+        <div className="w-full flex justify-center mb-4">
+          <button className="btn btn-sub">{t("recentOrders")}</button>
         </div>
         <div className="p-2 bg-gray_4 mb-2">
           <div className="f-normal mb-1.5">

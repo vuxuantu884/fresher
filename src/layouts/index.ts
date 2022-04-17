@@ -1,5 +1,4 @@
-// layout mobile
-export * from "./FooterLayout";
+export * from "./Footer";
 export * from "./HeaderLayout";
 export * from "./MainLayout";
 export * from "./CoreLayout";

@@ -1,15 +1,16 @@
 import { useTranslation } from "next-i18next";
-import { useDispatch } from "react-redux";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import {
+  ComponentSwitch,
   IConHamburger,
+  IConHeart,
+  IConPersonOutline,
   IConSearch,
   IConShoppingCart,
-  IConHeart,
 } from "component";
-import { setToggleSearch } from "store";
-import { PATH_HOME } from "constant";
+import { PATH_CARD, PATH_HOME, PATH_SEARCH } from "constant";
 
 interface IProps {
   handleToggleMenu?: () => void;
@@ -20,36 +21,53 @@ export const HeaderTitle = (props: IProps) => {
   const { handleToggleMenu } = props;
   //page hooks
   const { t } = useTranslation();
-  const dispatch = useDispatch();
   const route = useRouter();
-
-  const handleToggleSearch = () => {
-    dispatch(setToggleSearch());
-  };
 
   const handleReturnHome = () => {
     route.push(PATH_HOME);
   };
 
   return (
-    <div className="flex bg-white p-4">
-      <div className="mr-4">
-        <IConHamburger onClick={handleToggleMenu} />
-      </div>
-      <div className="">
-        <IConSearch onClick={handleToggleSearch} />
-      </div>
-      <div className="flex-1 text-center text-black font-sans not-italic font-bold text-base leading-[19px]">
-        <span onClick={handleReturnHome} className="cursor-pointer">
-          {t("home.reikaFashion")}
-        </span>
-      </div>
-      <div className="mr-4">
-        <IConHeart />
-      </div>{" "}
-      <div className="">
-        <IConShoppingCart />
-      </div>
-    </div>
+    <>
+      <ComponentSwitch
+        web={
+          <div className="flex items-center justify-between my-4 mx-[15vw] ">
+            <h2 className="cursor-pointer text-primary font-sans font-bold text-3xl m-0">
+              {t("home.reikaFashion")}
+            </h2>
+            <div className="flex items-center">
+              <IConPersonOutline className="mx-2" />
+              <IConHeart className="mx-2" />
+              <IConShoppingCart className="mx-2" />
+            </div>
+          </div>
+        }
+        mobile={
+          <div className="flex bg-white p-4">
+            <div className="mr-4">
+              <IConHamburger onClick={handleToggleMenu} />
+            </div>
+            <div className="">
+              <Link href={PATH_SEARCH} passHref>
+                <IConSearch />
+              </Link>
+            </div>
+            <div className="flex-1 text-center text-black font-sans not-italic font-bold text-base leading-[19px]">
+              <span onClick={handleReturnHome} className="cursor-pointer">
+                {t("home.reikaFashion")}
+              </span>
+            </div>
+            <div className="mr-4">
+              <IConHeart />
+            </div>{" "}
+            <div className="">
+              <Link passHref href={PATH_CARD}>
+                <IConShoppingCart />
+              </Link>
+            </div>
+          </div>
+        }
+      />
+    </>
   );
 };

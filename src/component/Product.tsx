@@ -12,6 +12,7 @@ interface IProps {
   saleTwo?: boolean;
   close?: boolean;
   select?: boolean;
+  handleClose?: () => void;
 }
 
 const options = [
@@ -28,7 +29,15 @@ const options = [
 export const ComponentProduct = (props: IProps) => {
   //page props
 
-  const { data, isHeart = true, saleOne, saleTwo, close, select } = props;
+  const {
+    data,
+    isHeart = true,
+    saleOne,
+    saleTwo,
+    close,
+    select,
+    handleClose,
+  } = props;
 
   return (
     <>
@@ -48,7 +57,7 @@ export const ComponentProduct = (props: IProps) => {
         </div>
         {close && (
           <div className="absolute top-1 right-1 ">
-            <IConCloseFull />
+            <IConCloseFull onClick={handleClose} />
           </div>
         )}
         {select && (
